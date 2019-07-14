@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Tour Lanka</title>
+        <link rel="icon" href="logo.ico" type="image/icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+
+            <picture>
+                <img src="logo.png" alt="logo.png">
+            </picture>
+
+            <div class="heading">
+                <h1>Tour Lanka</h1>
+            </div>
+
+            <nav>
+                <button type="button" onclick="displayMenu()">Menu</button>
+                <div id="menu">
+                    <ul>
+                        <li>Home</li>
+                        <li>Packages</li>
+                        <li>Quiz</li>
+                        <li>Gallery</li>
+                        <li>About</li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <section class="container">
+            
+        </section>
+
+    </body>
+    <script type="text/javascript">
+        function displayMenu() {
+            var menu = document.getElementById('menu');
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            }else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</html>

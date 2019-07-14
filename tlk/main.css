@@ -1,0 +1,68 @@
+*
+{
+    margin: 0;
+}
+
+body
+{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+header picture
+{
+    width: 20%;
+}
+
+picture img
+{
+    width: 20%;
+    float: left;
+}
+
+header .heading
+{
+    width: 70%;
+    float: left;
+    clear: right;
+    margin-left: 2%;
+}
+
+h1
+{
+    font-size: 100px;
+    font-family: monospace;
+    margin-top: 7%;
+}
+
+nav
+{
+    width: 100%;
+}
+
+nav button
+{
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    background-color: #999;
+    border: none;
+}
+
+#menu{
+    display: none;
+}
+
+#menu ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li
+{
+    padding: 2%;
+    background-color: #aaa;
+    font-size: 50px;
+}
