@@ -13,20 +13,36 @@
                 font-size: 5vw;
             }
 
-            fieldset{
+            fieldset
+            {
                 display: flex;
                 flex-direction: column;
             }
 
-            legend, label{
+            legend, label
+            {
                 margin-top: 10px;
                 padding: 10px;
             }
 
-            input{
+            input
+            {
                 font-size: 5vw;
                 padding: 5px;
                 margin: 5px;
+            }
+
+            #price-display
+            {
+                width: 100px;
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+
+            #total::after
+            {
+                content: '$'
             }
 
 
@@ -78,6 +94,12 @@
             </aside>
             <!-- middle column contains main content - Inquiry form -->
             <main>
+
+                <div class="display-price">
+
+                <p>Total cost: <span id="total">0.00</span></p>
+                </div>
+
                 <form name="bookPackage" class="Inquiry" method="post">
                     <fieldset>
                         <legend>Your Details</legend>
@@ -150,6 +172,7 @@
                     <input type="reset" id="reset" value="reset">
 
                 </form>
+
             </main>
             <!-- right column -->
             <aside class="right">

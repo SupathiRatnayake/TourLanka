@@ -21,17 +21,17 @@ picture img
     float: left;
 }
 
-header .heading
+header .site-name
 {
     width: 70%;
     float: left;
     clear: right;
-    margin-left: 2%;
+    margin-left: 5%;
 }
 
 h1
 {
-    font-size: 50px;
+    font-size: 10vw;
     font-family: monospace;
     margin-top: 7%;
 }

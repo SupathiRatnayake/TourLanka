@@ -2,10 +2,11 @@
 
 // Package constructor
 
-function tourObj(packName,  bCost, perAdult, numOfDays, type) {
+function tourObj(packName,  bCost, numOfDays, category) {
     this.packName = packName; // specefies name of tour package
-    this.perChild = this.perAdult/2; // cost per child per day is half of an adult
+    this.bCost = bCpst;
     this.numOfDays = numOfDays;
+    this.category = category;
 }
 
 // Package objects
@@ -175,28 +176,32 @@ function dateValidation(input, id){
 
 var accomodationCost ={'5Star': 400, '4Star': 300, '3Star': 250, 'budget': 200, 'V&B': 300};
 
+var cost{
+    bCost: 0.00,
+    aCost: 0.00,
+    chCost: 0.00,
 
-var costInfo = {
-    tPackage: function () {
-        return package.value; // get the value of input 'package' to tPackage
-    },
-
-    bCost: function (tPackage) {
-        return tPackage.basicCost; // get the basic cost of selected tour package to bCost
-    },
-    adults: function () {
-        return parseInt(adults.value); // get the number of adults from inputObj 'adults' to this.adults
-    },
-    children: function () {
-        return parseInt(children.value); // get the number of children from inputObj 'children' to this.children
+    setBasicCost: function (cost) {
+        this.bCost = cost;
     },
 
-    cost: function () {
-        var aCost, cCost; // aCost - cost for all adults, cCost cost for all children
-        aCost = this.tPackage.perAdult * this.adults;
-        cCost = this.tPackage.perChild * this.children;
-    }
+    setAdultCost: function (cost) {
+        this.aCost = cost;
+    },
+
+    setChildCost: function (cost) {
+        this.chCost = cost;
+    },
+
 }
+
+var display = document.getElementById('total');
+var displayCost = function (bCost, aCost, chCost) {
+    var total = 0.00;
+    total += bCost + aCost + chCost;
+    display.innerHTML = cost;
+}
+
 
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
@@ -285,6 +290,10 @@ accomodation.radList[i].onclick = function() {
 // adults
 document.getElementById('adults').onchange = function() {
 adults.setVal();
+if (adults.valid) {
+    var perAdult =
+    cost.setAdultCost()
+}
 }
 
 // Children
@@ -317,7 +326,7 @@ function Submission() {
             +'\nYour return day is ' + retDate.value
             + '\nYou\'ve chosen ' + package.value
             + '\nYour accomodation will be ' + accomodation.value
-            + '\nYour meal plan is ' + meal.value;
+            + '\nBooking will be done for ' + adults.value + ' adults and ' + children.value + ' children.'
             confirm(message);
         }
         else {
