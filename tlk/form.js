@@ -89,7 +89,7 @@ var accomodation ={
 
         }
 
-        cost.setHotelCost(parseInt(accomodationCost[this.value]);
+        cost.setHotelCost(parseInt(accomodationCost[this.value]));
     }
 }
 
@@ -143,7 +143,7 @@ function dateValidation(input, id){
 var perAdult = 0.20;
 var perChild = 0.10;
 
-var accomodationCost = {'5Star': 400, '4Star': 300, '3Star': 250, 'budget': 200, 'V&B': 300};
+var accomodationCost = {'5 Star Hotels': 400, '4 Star Hotels': 300, '3 Star Hotels': 250, 'Villas and Bungalows': 300};
 var packagePrice = {
     'package 1': 200,
     'package 2': 350,
@@ -153,7 +153,7 @@ var packagePrice = {
     'package 6': 350,
 };
 
-var cost{
+var cost = {
 
     bCost: 0,
     aCost: 0,
@@ -162,28 +162,33 @@ var cost{
 
     setBasicCost: function (cost) {
         this.bCost = cost;
+        this.displayTotal();
+
     },
 
     setAdultCost: function (cost) {
         this.aCost = cost;
+        this.displayTotal();
+
     },
 
     setChildCost: function (cost) {
         this.chCost = cost;
+        this.displayTotal();
+
     },
     setHotelCost: function (cost) {
         this.hotelCost = cost;
+        this.displayTotal();
+
+    },
+
+    displayTotal: function () {
+        var total = this.bCost + this.aCost + this.chCost + this.hotelCost;
+        document.getElementById('total').innerHTML = total;
     }
 
 }
-
-var display = document.getElementById('total');
-var displayCost = function (bCost, aCost, chCost, hotelCost) {
-    var total = 0.00;
-    total += bCost + aCost + chCost + hotelCost;
-    display.innerHTML = cost;
-}
-
 
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
@@ -205,15 +210,15 @@ for (var i = 0; i < list.length; i++) {
 
 // Adding packages to SELECT packages
 
-var packages = [package1, package2, package3, package4, package5, package6];
+var packages = ['package 1', 'package 2', 'package 3', 'package 4', 'package 5', 'package 6'];
 var item = document.createElement('OPTION');
 item.setAttribute('value',"");
 item.innerHTML = "Please Select";
 document.getElementById('package').appendChild(item);
 for (var i = 0; i < packages.length; i++) {
     item = document.createElement('OPTION');
-    item.setAttribute('value',packages[i].packName);
-    item.innerHTML = packages[i].packName;
+    item.setAttribute('value',packages[i]);
+    item.innerHTML = packages[i];
     document.getElementById('package').appendChild(item);
 }
 
@@ -304,7 +309,7 @@ function Submission() {
             continue;
         }
         else {
-            alert(inputList[i] + ' is Invalid');
+            document.getElementById(inputList[i].id).focus();
             break;
         }
     }
@@ -316,6 +321,7 @@ function Submission() {
             + '\nYou\'ve chosen ' + package.value
             + '\nYour accomodation will be ' + accomodation.value
             + '\nBooking will be done for ' + adults.value + ' adults and ' + children.value + ' children.'
+            + '\nTotal cost: ' + cost.bCost + cost.aCost + cost.chCost + cost.hotelCost;
             confirm(message);
         }
         else {
