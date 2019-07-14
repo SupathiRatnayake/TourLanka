@@ -18,13 +18,13 @@
                 flex-direction: column;
             }
 
-            label{
+            legend, label{
                 margin-top: 10px;
                 padding: 10px;
             }
 
             input{
-                font-size: 30px;
+                font-size: 5vw;
                 padding: 5px;
                 margin: 5px;
             }
@@ -140,11 +140,12 @@
                         <input type="text" class="guests" id="children" placeholder="Children(under 12 yrs)">
 
                     </fieldset>
+                    <div class="">
+                        <label for="agree">I agree the <a href="#">Terms & Conditions</a> </label>
+                        <input type="checkbox" id="terms" name="terms">
+                    </div>
 
-                    <label for="agree">I agree the <a href="#">Terms & Conditions</a> </label>
-                    <input type="checkbox" id="terms" name="terms">
-
-                    <input type="submit" id="submit" value="Inquir">
+                    <input type="submit" id="submit" value="Inquir" onclick="Submission()">
 
                     <input type="reset" id="reset" value="reset">
 
@@ -193,4 +194,7 @@
             }
         }
     </script>
+
+    <script src="form.js"></script>
+
 </html>
