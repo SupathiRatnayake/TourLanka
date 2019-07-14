@@ -5,6 +5,30 @@
         <title>Tour Packages</title>
         <link rel="icon" href="logo.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
+        <style media="screen">
+
+            .price::after
+            {
+                content: "$";
+            }
+
+            .package-input
+            {
+                padding: 5px;
+                margin: 5px;
+            }
+
+            .package-input h4, input, label
+            {
+                font-size: 30px;
+            }
+
+            .package-input select
+            {
+                font-size: 20px;
+            }
+
+        </style>
     </head>
     <body>
         <header>
@@ -35,6 +59,199 @@
             <div class="bread-crumbs">
                 Home > Tour Packages
             </div>
+            <div class="page-title">
+                <h2>Tour Packages</h2>
+            </div>
+
+            <aside class="left">
+                <!-- font-size-control inclueds font size increasing and decreasing buttons -->
+                <div class="font-size-control">
+                    <div id="increase">
+                        <button type="button" name="button">+</button>
+                    </div>
+                    <div id="decrease">
+                        <button type="button" name="button">-</button>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+                <div class="package-form">
+                    <form id="packages">
+
+                        <div class="package-input">
+
+                            <h4>Package Category</h4>
+
+                            <select class="" name="p_categories">
+                                <option value="">All</option>
+                                <option value="">Leisure Tours</option>
+                                <option value="">Honeymoon Packages</option>
+                                <option value="">Adventure Tours/ Trecks</option>
+                                <option value="">Cultural Packages</option>
+                                <option value="">Safaries</option>
+                                <option value="">Pilgrimage Tours</option>
+                            </select>
+
+                        </div>
+
+                        <div class="package-input">
+
+                        <label for="min">Minimum Price</label>
+                        <input type="text" name="" placeholder="Enter your minimum price">
+
+                        </div>
+
+                        <div class="package-input">
+
+                        <label for="max">Minimum Price</label>
+                        <input type="text" name="" placeholder="Enter your maximum price">
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <div id="container">
+
+
+                    <div class="item">
+                        <h4>package 1</h4>
+                        <img src="#" alt="#">
+                        <dl class="item-details">
+                            <dt>cost</dt>
+                            <dd class="price">00.00</dd>
+                            <dt>Number of days</dt>
+                            <dd>00</dd>
+                            <dt class="places">Places</dt>
+                            <dd class="places">
+                                <ul>
+                                    <li>place1</li>
+                                    <li>place2</li>
+                                    <li>place3</li>
+                                    <li>place4</li>
+                                </ul>
+                            </dd>
+                        </dl>
+
+                        <button type="button" name="button">See full details</button>
+
+                        <button type="button" name="button">Inquir</button>
+
+                    </div>
+
+
+                    <div class="item">
+                        <h4>package 2</h4>
+                        <img src="#" alt="#">
+                        <dl class="item-details">
+                            <dt>cost</dt>
+                            <dd class="price">00.00</dd>
+                            <dt>Number of days</dt>
+                            <dd>00</dd>
+                            <dt class="places">Places</dt>
+                            <dd class="places">
+                                <ul>
+                                    <li>place1</li>
+                                    <li>place2</li>
+                                    <li>place3</li>
+                                    <li>place4</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <button type="button" name="button">See full details</button>
+                    </div>
+
+                    <div class="item">
+                        <h4>package 3</h4>
+                        <img src="#" alt="#">
+                        <dl class="item-details">
+                            <dt>cost</dt>
+                            <dd class="price">00.00</dd>
+                            <dt>Number of days</dt>
+                            <dd>00</dd>
+                            <dt class="places">Places</dt>
+                            <dd class="places">
+                                <ul>
+                                    <li>place1</li>
+                                    <li>place2</li>
+                                    <li>place3</li>
+                                    <li>place4</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <button type="button" name="button">See full details</button>
+                    </div>
+
+                    <div class="item">
+                        <h4>package 4</h4>
+                        <img src="#" alt="#">
+                        <dl class="item-details">
+                            <dt>cost</dt>
+                            <dd class="price">00.00</dd>
+                            <dt>Number of days</dt>
+                            <dd>00</dd>
+                            <dt class="places">Places</dt>
+                            <dd class="places">
+                                <ul>
+                                    <li>place1</li>
+                                    <li>place2</li>
+                                    <li>place3</li>
+                                    <li>place4</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <button type="button" name="button">See full details</button>
+                    </div>
+
+                    <div class="item">
+                        <h4>package 5</h4>
+                        <img src="#" alt="#">
+                        <dl class="item-details">
+                            <dt>cost</dt>
+                            <dd class="price">00.00</dd>
+                            <dt>Number of days</dt>
+                            <dd>00</dd>
+                            <dt class="places">Places</dt>
+                            <dd class="places">
+                                <ul>
+                                    <li>place1</li>
+                                    <li>place2</li>
+                                    <li>place3</li>
+                                    <li>place4</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <button type="button" name="button">See full details</button>
+                    </div>
+
+                    <div class="item">
+                        <h4>package 6</h4>
+                        <img src="#" alt="#">
+                        <dl class="item-details">
+                            <dt>cost</dt>
+                            <dd class="price">00.00</dd>
+                            <dt>Number of days</dt>
+                            <dd>00</dd>
+                            <dt class="places">Places</dt>
+                            <dd class="places">
+                                <ul>
+                                    <li>place1</li>
+                                    <li>place2</li>
+                                    <li>place3</li>
+                                    <li>place4</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <button type="button" name="button">See full details</button>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="right">
+                <button type="button" name="button">go up</button>
+            </aside>
+            
         </section>
         <footer>
             <hr />
