@@ -66,3 +66,9 @@ ul li
     background-color: #aaa;
     font-size: 50px;
 }
+.address p::after{
+    content: ",";
+}
+#address-locality::after{
+    content: ".";
+}

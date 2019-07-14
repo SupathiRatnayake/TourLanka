@@ -7,6 +7,71 @@
         <link rel="stylesheet" href="main.css" type="text/css">
     </head>
     <body>
+        <header>
 
+            <picture>
+                <img src="logo.png" alt="logo.png">
+            </picture>
+
+            <div class="heading">
+                <h1>Tour Lanka</h1>
+            </div>
+
+            <nav>
+                <button type="button" onclick="displayMenu()">Menu</button>
+                <div id="menu">
+                    <ul>
+                        <li>Home</li>
+                        <li>Packages</li>
+                        <li>Quiz</li>
+                        <li>Gallery</li>
+                        <li>About</li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <section class="container">
+            <div class="bread-crumbs">
+                Home > Tour Packages
+            </div>
+        </section>
+        <footer>
+            <hr />
+            <dl class="footer-data">
+
+                <dt>Contact</dt>
+                <dd>+xx-xxx xxx xxxx</dd>
+
+                <dt>Address</dt>
+                <dd>
+                    <p>Tour Lanka</p>
+                    <p>IIT</p>
+                    <p>No. 57</p>
+                    <p>Ramakrishna Road</p>
+                    <p>Colombo 06</p>
+                </dd>
+
+                <dt>Email</dt>
+                <dd><a href="mailto:inquiries@tourlanka.com">inquiries@tourlanka.com</a></dd>
+            </dl>
+
+            <p class="copywrite">Copyright © 2019 Tour Lanka</p>
+            <p class="credit">Website designed and developed by SARK Web Devepolers</p>
+            <p class="developer">Student: <a href="tourPackages.html">Student2</a></p>
+            <p class="sitemap"><a href="sitemap.html">Sitemap</a></p>
+
+        </footer>
     </body>
+    <script type="text/javascript">
+        function displayMenu() {
+            var menu = document.getElementById('menu');
+
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            }else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </html>
