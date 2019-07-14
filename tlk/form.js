@@ -1,3 +1,37 @@
+// Hard coded database of TOur Packages
+
+// Package constructor
+
+function tourObj(packName,  bCost, perAdult, numOfDays, type) {
+    this.packName = packName; // specefies name of tour package
+    this.perChild = this.perAdult/2; // cost per child per day is half of an adult
+    this.numOfDays = numOfDays;
+}
+
+// Package objects
+
+var package1 = new tourObj('package 1', 500, 5, 'budget');
+var package2 = new tourObj('package 2', 800, 5, 'budget');
+var package3 = new tourObj('package 3', 800, 5, 'budget');
+var package4 = new tourObj('package 4', 500, 5, 'budget');
+var package5 = new tourObj('package 5', 800, 5, 'budget');
+var package6 = new tourObj('package 6', 800, 5, 'budget');
+
+// Add a description to each package
+
+package1.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
+
+package2.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
+
+package3.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
+
+package4.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
+
+package5.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
+
+package6.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
+
+
 // This javascript program validates the bookPackage form, gets data and informs user.
 
 // This is the blueprint for all the inputs
@@ -47,7 +81,28 @@ var depDate = new inputObj('depDate', /^(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[
 var retDate = new inputObj('retDate', /^(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[012])[\/]\d{4}$/);
 
 // package input type: select
-var package = new inputObj('pack', /^\w+$/);
+var package = {
+
+    id : 'package',
+
+    value: "",
+
+    valid: false,
+
+    setVal : function () {
+        this.value = document.getElementById(this.id).value;
+        this.validate();
+    },
+
+    validate : function () {
+        if (this.value != "") {
+            this.valid = true;
+        }else {
+            this.valid = false;
+            alert("Sum ting wong");
+        }
+    }
+}
 
 
 var accomodation ={
@@ -56,7 +111,7 @@ var accomodation ={
     valid: false,  // if any radio button of group is settled, this will become true
     value: '',
     getRadList: function() {
-        this.radList = document.getElementsByName('acc');
+        this.radList = document.getElementsByName('accomodation');
     },
     getInput: function() {
         for (var i = 0; i < this.radList.length; i++) {
@@ -117,66 +172,9 @@ function dateValidation(input, id){
     }
 }
 
-var inputList = [fName, lName,telNo, email, nat, depDate, retDate, package, accomodation,adults, children];
-
-function Submission() {
-    alert("function submission works!");
-    for (var i = 0; i < inputList.length; i++) {
-        if (inputList[i].valid) {
-            continue;
-        }
-        else {
-            alert(inputList[i].id + 'Invalid');
-            break;
-        }
-    }
-    if (i == inputList.length) {
-        if (terms.isChecked()) {
-            var message = 'Hi '+ fName.value
-            +'\n Your departure date is ' + depDate.value
-            +'\nYour return day is ' + retDate.value
-            + '\nYou\'ve chosen ' + package.value
-            + '\nYour accomodation will be ' + accomodation.value
-            + '\nYour meal plan is ' + meal.value;
-            confirm(message);
-        }
-        else {
-            focus
-        }
-
-    }
-}
-
-function tourObj(id, packName,  bCost, perAdult, numOfDays, type) {
-    this.id = id;
-    this.packName = packName; // specefies name of tour package
-    this.perChild = this.perAdult/2; // cost per child per day is half of an adult
-    this.numOfDays = numOfDays;
-}
-
-var package1 = new tourObj('p1', 'package 1', 500, 5, 'budget');
-var package2 = new tourObj('p2', 'package 2', 800, 5, 'budget');
-var package3 = new tourObj('p3', 'package 3', 800, 5, 'budget');
-var package4 = new tourObj('p4', 'package 4', 500, 5, 'budget');
-var package5 = new tourObj('p5', 'package 5', 800, 5, 'budget');
-var package6 = new tourObj('p6', 'package 6', 800, 5, 'budget');
-
-package1.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
-
-package2.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
-
-package3.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
-
-package4.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
-
-package5.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
-
-package6.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
-
 
 var accomodationCost ={'5Star': 400, '4Star': 300, '3Star': 250, 'budget': 200, 'V&B': 300};
 
-var mealCost ={'fb': 100, 'hb': 50, 'bb': 25};
 
 var costInfo = {
     tPackage: function () {
@@ -201,9 +199,11 @@ var costInfo = {
 }
 
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+
 // set the attribute 'list' to data list 'countryList'
 document.getElementById('nat').setAttribute('list','countryList');
-var list = ['Sri Lanka', 'Japan', 'Australia', 'China']; // a small sample
+var list = ['Sri Lanka', 'Japan', 'Australia', 'China', 'Germany', 'Russia']; // a small sample
 /*
     * For each country nae in country list,
     we create an option.
@@ -215,17 +215,23 @@ for (var i = 0; i < list.length; i++) {
     item.setAttribute('value',list[i]);
     document.getElementById('countryList').appendChild(item);
 }
+
+// Adding packages to SELECT packages
+
 var packages = [package1, package2, package3, package4, package5, package6];
 var item = document.createElement('OPTION');
 item.setAttribute('value',"");
 item.innerHTML = "Please Select";
-document.getElementById('pack').appendChild(item);
+document.getElementById('package').appendChild(item);
 for (var i = 0; i < packages.length; i++) {
     item = document.createElement('OPTION');
-    item.setAttribute('value',packages[i].id);
+    item.setAttribute('value',packages[i].packName);
     item.innerHTML = packages[i].packName;
-    document.getElementById('pack').appendChild(item);
+    document.getElementById('package').appendChild(item);
 }
+
+
+//************ Event Listeners **************************
 
 //First Name
 document.getElementById('fName').onchange = function() {
@@ -264,16 +270,15 @@ if (retDate.valid) {
 
 }
 // Package
-document.getElementById('pack').onchange = function() {
+document.getElementById('package').onchange = function() {
 package.setVal();
 }
 
 // Accomodation
 accomodation.getRadList();
-//var radios = document.getElementsByName('meal');
 for (var i = 0; i < accomodation.radList.length; i++) {
 accomodation.radList[i].onclick = function() {
-    meal.getInput();
+    accomodation.getInput();
     }
 }
 
@@ -287,4 +292,37 @@ document.getElementById('children').onchange = function() {
 children.setVal();
 }
 
-//* * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+//************* END Event Listeners ***********************
+
+// Form submission process
+
+var inputList = [fName, lName,telNo, email, nat, depDate, retDate, package, accomodation,adults, children];
+
+function Submission() {
+    var i;
+    alert("function submission works!");
+    for (i = 0; i < inputList.length; i++) {
+        if (inputList[i].valid) {
+            continue;
+        }
+        else {
+            alert(inputList[i] + ' is Invalid');
+            break;
+        }
+    }
+    if (i == inputList.length) {
+        if (terms.isChecked()) {
+            var message = 'Hi '+ fName.value
+            +'\n Your departure date is ' + depDate.value
+            +'\nYour return day is ' + retDate.value
+            + '\nYou\'ve chosen ' + package.value
+            + '\nYour accomodation will be ' + accomodation.value
+            + '\nYour meal plan is ' + meal.value;
+            confirm(message);
+        }
+        else {
+            alert("Terms and conditions not checked!")
+        }
+
+    }
+}
