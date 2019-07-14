@@ -2,9 +2,35 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tour Lanka</title>
         <link rel="icon" href="logo.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
+        <style media="screen">
+            form
+            {
+                display: block;
+                font-size: 5vw;
+            }
+
+            fieldset{
+                display: flex;
+                flex-direction: column;
+            }
+
+            label{
+                margin-top: 10px;
+                padding: 10px;
+            }
+
+            input{
+                font-size: 30px;
+                padding: 5px;
+                margin: 5px;
+            }
+
+
+        </style>
     </head>
     <body>
         <header>
@@ -33,7 +59,7 @@
         </header>
         <section class="container">
             <div class="bread-crumbs">
-                Home > Tour Packages > Inquiry Form
+                Home ► Tour Packages ► Inquiry Form
             </div>
             <div class="page-title">
                 <h2>Inquiry Form</h2>
@@ -50,12 +76,79 @@
                     </div>
                 </div>
             </aside>
-            <!-- middle column contains main content -->
+            <!-- middle column contains main content - Inquiry form -->
             <main>
-                <div id="dev-group">
-                    <h3>Coursework Group</h3>
-                    Adeesha code here
-                </div>
+                <form name="bookPackage" class="Inquiry" method="post">
+                    <fieldset>
+                        <legend>Your Details</legend>
+
+                        <label for="Fname">First Name</label>
+                        <input type="text" id="fName" name="fName" >
+
+                        <label for="Lname">Last Name</label>
+                        <input type="text" id="lName" name="lName" >
+
+                        <label for="telNo">Telephone Number</label>
+                        <input type="tel" id="telNo" name="telNo" placeholder="+xx-xxx xxx xxxx">
+
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="youremail@example.com" >
+
+                        <label for="nat">Passport Nationality</label>
+                        <input type="text" id="nat" name="nationality" >
+                        <datalist id="countryList"></datalist>
+
+                    </fieldset>
+
+
+                    <fieldset>
+
+                        <legend>Tour Booking Details</legend>
+
+                        <label for="depDate">Departure</label>
+                        <input type="datetime" id="depDate" name="depDate" placeholder="dd/mm/yy" >
+
+                        <label for="retDate">Return</label>
+                        <input type="datetime" id="retDate" name="retDate" placeholder="dd/mm/yy" >
+
+                        <label>Please select your package</label>
+                        <select name="package" id="pack" ></select>
+                        <br />
+
+                        <div class="accomodation">
+                        <p>Accomodation</p>
+
+                            <input id="5star" type="radio" name="accomodation" value="5 Star Hotels">
+                            <label for="5star" class="rad">5 Star Hotels</label>
+                            <br>
+
+                            <input id="4star" type="radio" name="accomodation" value="4 Star Hotels">
+                            <label for="4star" class="rad">4 Star Hotels</label>
+                            <br>
+
+                            <input id="3star" type="radio" name="accomodation" value="3 Star Hotels">
+                            <label for="3star" class="rad">3 Star Hotels</label>
+                            <br>
+
+                            <input id="vb" type="radio" name="accomodation" value="Villas and Bungalows">
+                            <label for="vb" class="rad">Villas and Bungalows</label>
+
+                        </div>
+
+                        <label>Number of guests</label>
+                        <input type="text" class="guests" id="adults" placeholder="Number of Adults">
+                        <input type="text" class="guests" id="children" placeholder="Children(under 12 yrs)">
+
+                    </fieldset>
+
+                    <label for="agree">I agree the <a href="#">Terms & Conditions</a> </label>
+                    <input type="checkbox" id="terms" name="terms">
+
+                    <input type="submit" id="submit" value="Inquir">
+
+                    <input type="reset" id="reset" value="reset">
+
+                </form>
             </main>
             <!-- right column -->
             <aside class="right">
