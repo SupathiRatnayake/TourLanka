@@ -105,19 +105,19 @@
                         <legend>Your Details</legend>
 
                         <label for="Fname">First Name</label>
-                        <input type="text" id="fName" name="fName" >
+                        <input type="text" id="fName" name="fName" tabindex="1">
 
                         <label for="Lname">Last Name</label>
-                        <input type="text" id="lName" name="lName" >
+                        <input type="text" id="lName" name="lName" tabindex="2">
 
                         <label for="telNo">Telephone Number</label>
-                        <input type="tel" id="telNo" name="telNo" placeholder="+xx-xxx xxx xxxx">
+                        <input type="tel" id="telNo" name="telNo" tabindex="3" placeholder="+xx-xxx xxx xxxx">
 
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="youremail@example.com" >
+                        <input type="email" id="email" name="email" tabindex="4" placeholder="youremail@example.com" >
 
                         <label for="nat">Passport Nationality</label>
-                        <input type="text" id="nat" name="nationality" >
+                        <input type="text" id="nat" name="nationality" tabindex="5" >
                         <datalist id="countryList"></datalist>
 
                     </fieldset>
@@ -128,19 +128,19 @@
                         <legend>Tour Booking Details</legend>
 
                         <label for="depDate">Departure</label>
-                        <input type="datetime" id="depDate" name="depDate" placeholder="dd/mm/yy" >
+                        <input type="datetime" id="depDate" name="depDate" tabindex="6" placeholder="dd/mm/yy" >
 
                         <label for="retDate">Return</label>
-                        <input type="datetime" id="retDate" name="retDate" placeholder="dd/mm/yy" >
+                        <input type="datetime" id="retDate" name="retDate" tabindex="7" placeholder="dd/mm/yy" >
 
                         <label>Please select your package</label>
-                        <select name="package" id="package" ></select>
+                        <select name="package" id="package" tabindex="8" ></select>
                         <br />
 
                         <div class="accomodation">
                         <p>Accomodation</p>
 
-                            <input id="5star" type="radio" name="accomodation" value="5 Star Hotels">
+                            <input id="5star" type="radio" name="accomodation" tabindex="9" value="5 Star Hotels">
                             <label for="5star" class="rad">5 Star Hotels</label>
                             <br>
 
@@ -158,18 +158,18 @@
                         </div>
 
                         <label>Number of guests</label>
-                        <input type="text" class="guests" id="adults" placeholder="Number of Adults">
-                        <input type="text" class="guests" id="children" placeholder="Children(under 12 yrs)">
+                        <input type="text" class="guests" id="adults" name="adults" tabindex="10" placeholder="Number of Adults">
+                        <input type="text" class="guests" id="children" name="children" tabindex="11" placeholder="Children(under 12 yrs)">
 
                     </fieldset>
                     <div class="">
                         <label for="agree">I agree the <a href="#">Terms & Conditions</a> </label>
-                        <input type="checkbox" id="terms" name="terms">
+                        <input type="checkbox" id="terms" name="terms" tabindex="12">
                     </div>
 
-                    <input type="submit" id="submit" value="Inquir" onclick="Submission()">
+                    <input type="submit" id="submit" value="Inquir" tabindex="13" onclick="Submission()">
 
-                    <input type="reset" id="reset" value="reset">
+                    <input type="reset" id="reset" tabindex="14" value="reset">
 
                 </form>
 
