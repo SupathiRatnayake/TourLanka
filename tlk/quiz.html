@@ -9,31 +9,13 @@
     </head>
     <body>
         <div class="top">
-            <header>
-                <a href="index.html">
-                    <picture class="logo">
-                        <img src="logo_banner.png" alt="Tour Lanka Logo">
-                    </picture>
 
-                    <div id="site-name">
-                        <h1>Tour Lanka</h1>
-                    </div>
-                </a>
-            </header>
+            <header id="header"></header>
 
-            <nav>
-                <button type="button" onclick="displayMenu()">Menu</button>
-                <div id="menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="tourPackages.html">Packages</a></li>
-                        <li><a href="quiz.html">Quiz</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
-                </div>
-            </nav>
+            <nav id="nav"></nav>
+
         </div>
+
         <div class="container">
             <!-- no breadcrums on home page -->
             <div class="page-title">
@@ -240,15 +222,4 @@
 
     <script src="main.js"></script>
 
-    <script type="text/javascript">
-        function displayMenu() {
-            var menu = document.getElementById('menu');
-
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            }else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
 </html>

@@ -12,8 +12,6 @@ body
 header .site-name
 {
     width: 100%;
-    float: left;
-    clear: right;
 }
 
 h1,h2
@@ -71,12 +69,20 @@ h1
     margin: 0;
 }
 
-.logo
+#logo
 {
     display: none;
+}
+#logo img
+{
+    width: 90px;
 }
 
 .footer-data
 {
     width: 100%;
+}
+
+.left, .right, .font-size-control{
+    display: none;
 }

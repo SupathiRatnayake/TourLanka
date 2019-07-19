@@ -65,26 +65,14 @@
         </style>
     </head>
     <body>
-        <header>
+        <div class="top">
 
-            <div class="heading">
-                <h1>Tour Lanka</h1>
-            </div>
+            <header id="header"></header>
 
-            <nav>
-                <button type="button" onclick="displayMenu()">Menu</button>
-                <div id="menu">
-                    <ul>
-                        <li>Home</li>
-                        <li>Packages</li>
-                        <li>Quiz</li>
-                        <li>Gallery</li>
-                        <li>About</li>
-                    </ul>
-                </div>
-            </nav>
+            <nav id="nav"></nav>
 
-        </header>
+        </div>
+
         <section class="container">
             <div class="bread-crumbs">
                 Home ► Tour Packages
@@ -311,16 +299,9 @@
 
         </footer>
     </body>
-    <script type="text/javascript">
-        function displayMenu() {
-            var menu = document.getElementById('menu');
 
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            }else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
+    <script src="main.js"></script>
+
     <script src="tourPackages.js"></script>
+    
 </html>

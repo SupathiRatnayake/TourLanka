@@ -1,5 +1,5 @@
 *{
-    font-size: 1vw;
+    font-size: 6vw;
 }
 
 h1
@@ -21,7 +21,6 @@ h1
 */
 nav ul li a
 {
-    text-decoration: none;
     color: #fff;
     font-size: 7vw;
     font-family: sans-serif;
@@ -38,4 +37,9 @@ nav button
 {
     text-align: center;
     font-size: 7vw;
+}
+
+a
+{
+    text-decoration: none;
 }
