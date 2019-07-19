@@ -8,30 +8,31 @@
         <link rel="stylesheet" href="main.css" type="text/css">
     </head>
     <body>
-        <header>
-            <picture class="logo">
-                <img src="logo_banner.png" alt="">
-            </picture>
+        <div class="top">
+            <header>
+                <picture class="logo">
+                    <img src="logo_banner.png" alt="">
+                </picture>
 
-            <div class="site-name">
-                <h1>Tour Lanka</h1>
-            </div>
+                <div class="site-name">
+                    <h1>Tour Lanka</h1>
+                </div>
+            </header>
 
             <nav>
                 <button type="button" onclick="displayMenu()">Menu</button>
                 <div id="menu">
                     <ul>
-                        <li>Home</li>
-                        <li>Packages</li>
-                        <li>Quiz</li>
-                        <li>Gallery</li>
-                        <li>About</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tourPackages.html">Packages</a></li>
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
             </nav>
-
-        </header>
-        <section class="container">
+        </div>
+        <div class="container">
             <!-- no breadcrums on home page -->
             <div class="page-title">
                 <h2>Enjoy Your Tour In Sri Lanka!</h2>
@@ -59,7 +60,7 @@
             <aside class="right">
                 <button type="button" name="button">go up</button>
             </aside>
-        </section>
+        </div> <!--container-->
         <footer>
             <hr />
             <dl class="footer-data">
