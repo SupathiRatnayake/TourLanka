@@ -2,7 +2,19 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Gallery</title>
+        <style media="screen">
+            .gallery img
+            {
+                width: 200px;
+            }
+
+            #big-image
+            {
+                width: 800px;
+            }
+        </style>
     </head>
     <body>
         <div class="top">
@@ -16,13 +28,24 @@
         <div class="container">
             <main>
                 <div class="gallery">
-                    <img src="images/" alt="#">
+                    <img src="images/thumb1.jpg" alt="#" onclick="display('DSC02929.jpg')">
+                    <img src="images/thumb3.jpg" alt="#" onclick="display('package4.jpg')">
+                    <img src="images/thumb4.jpg" alt="#" onclick="display('package3.jpg')">
+                    <img src="images/thumb2.jpg" alt="#" onclick="display('package5.jpg')">
+
                 </div>
-                <div id="big-image">
+                <div>
+                    <img src="" alt="" id="big-image">
 
                 </div>
             </main>
         </div>
         <footer id="footer"></footer>
     </body>
+    <script type="text/javascript">
+        function display(image) {
+            var image = 'images/' + image;
+            document.getElementById('big-image').setAttribute('src', image);
+        }
+    </script>
 </html>
