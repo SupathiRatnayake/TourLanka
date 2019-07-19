@@ -45,7 +45,7 @@ function displayPackages() {
         image.setAttribute('src', 'images/' + package.image);
         item.appendChild(title);
         item.appendChild(image);
-        document.getElementById('container').appendChild(item);
+        document.getElementById('package-container').appendChild(item);
     }
 }
 
