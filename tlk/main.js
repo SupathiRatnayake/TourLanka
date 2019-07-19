@@ -6,7 +6,7 @@ var logo = document.createElement('div');
 logo.setAttribute('id', 'logo');
 
 var img = document.createElement('img');
-img.setAttribute('src', 'logo_banner.png');
+img.setAttribute('src', 'images/logo_banner.png');
 img.setAttribute('alt', 'Tour Lanka Logo');
 
 logo.appendChild(img);

@@ -196,5 +196,100 @@
     </body>
 
     <script src="main.js"></script>
+    <script type="text/javascript">
+    function ValidateForm(){
+        result = new Array();
+        count = 0;
+        if (!document.forms[0].one[0].checked == true) {
+            result[count] = "<b>Question 1. The correct answer is " + document.forms[0].one[0].value + ".</b><br/>";
+            count++;
+        }
+        if (!document.forms[0].two[2].checked == true) {
+            result[count] = "<b>Question 2. The correct answer is " + document.forms[0].two[2].value + ".</b><br/>";
+            count++;
+        }
+        if (!document.forms[0].three[0].checked == true) {
+            result[count] = "<b>Question 3. The correct answer is " + document.forms[0].three[0].value + ".</b><br/>";
+            count++;
+        }
+        if (!document.forms[0].four[1].checked == true) {
+            result[count] = "<b>Question 4. The correct answer is " + document.forms[0].four[1].value + ".</b><br/>";
+            count++;
+        }
+        if (!document.forms[0].five[3].checked == true) {
+            result[count] = "<b>Question 5. The correct answer is " + document.forms[0].five[3].value + ".</b><br/>";
+            count++;
+        if (!document.forms[0].six[2].checked == true)
+            result[count] = "<b>Question 6. The correct answer is " + document.forms[0].six[2].value + ".</b><br/>";
+            count++;
+        }
+        if (!document.forms[0].seven[0].checked == true) {
+            result[count] = "<b>Question 7. The correct answer is " + document.forms[0].seven[0].value + ".</b><br/>";
+            count++;
+        }
+
+        if (!document.forms[0].eight[1].checked == true) {
+            result[count] = "<b>Question 8. The correct answer is " + document.forms[0].eight[1].value + ".</b><br/>";
+            count++;
+        }
+        if (!document.forms[0].nine[2].checked == true) {
+            result[count] = "<b>Question 9. The correct answer is " + document.forms[0].nine[2].value + ".</b><br/>";
+            count++;
+        }
+        if (!document.forms[0].ten[0].checked == true) {
+            result[count] = "<b>Question 10. The correct answer is " + document.forms[0].ten[0].value + ".</b><br/>";
+            count++;
+        }
+
+        var answerScore = ((10-result.length)*2) + result.length*(-1);
+        if (result.length > 0) {
+
+            var vString = "";
+            for (var i=0; i<result.length; i++) {
+                vString += result[i] + "<br/>";
+            }
+        document.write("<img src='LOGO3.png' id='logo' alt='logo' width='180px' height='180px'/><h2 style='color:blue; font-size:40px;'>"+"Results !</h2>"+"<br/><p style='font-size:26px;'>"
+            +result.length+" Incorrect answers:<br/><br/>" + vString +
+            "</p><br/><p style='font-weight:bold;font-size:25px;'>Your score is "+answerScore+"</p>");
+        }
+        else {
+            document.write("<img src='LOGO3.png' id='logo' alt='logo' width='180px' height='180px'/><h2 style='color:blue; font-size:40px;'>"+"Results !</h2>"+"<br/><center><p style='font-size:30px;'>"+
+            "All the questions were answered correctly.</p><br/><p style='font-weight:bold;font-size:35px;'>Your score is "+answerScore+"<br/><br/>"+
+            "Congratulations!</p></center>");
+        }
+        <!--color changing according to score-->
+        if(answerScore > 10)
+        {
+            document.body.style.backgroundColor = "#D2B48C";
+        }
+        else
+        {
+            document.body.style.backgroundColor = "#BDB76B";
+        }
+    }
+    <!--Set timer-->
+    var total_seconds = 60*5;
+    var c_minutes = parseInt(total_seconds / 60);
+    var c_seconds = parseInt(total_seconds%60);
+    function CheckTime(){
+
+    document.getElementById("quiz-timer").innerHTML='Time Left : ' + c_minutes + ' minutes ' + c_seconds + ' seconds';
+
+    if (total_seconds>0)
+        {
+        total_seconds=total_seconds-1;
+        c_minutes = parseInt(total_seconds / 60);
+        c_seconds = parseInt(total_seconds%60);
+        setTimeout("CheckTime()",1000);
+
+        }
+    else
+        {
+        ValidateForm();
+        }
+    }
+    setTimeout("CheckTime()",1000);
+
+    </script>
 
 </html>
