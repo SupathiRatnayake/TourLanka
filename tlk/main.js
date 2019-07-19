@@ -26,11 +26,13 @@ document.getElementById('header').appendChild(aTag);
 // --------- Header Complete -----------
 
 // --------- Making Main Navigation Bar ---------
-var index = {name: 'Home', id:'index', file: 'index.html'};
-var tpack = {name: 'Tour Packages', id:'tours', file: 'tourPackages.html'};
-var quiz = {name: 'Quiz', id:'quiz', file: 'quiz.html'};
-var gallery = {name: 'Gallery', id:'gal', file: 'gallery.html'};
-var about = {name: 'About', id:'about', file: 'about.html'};
+
+// ------------- Page data base -----------------
+var index = {name: 'Home', id:'index', file: 'index.html', developer: 'Rakitha'};
+var tpack = {name: 'Tour Packages', id:'tours', file: 'tourPackages.html', developer: 'Supathi'};
+var quiz = {name: 'Quiz', id:'quiz', file: 'quiz.html', developer: 'Adeesha'};
+var gallery = {name: 'Gallery', id:'gal', file: 'gallery.html', developer: 'Kaushika'};
+var about = {name: 'About', id:'about', file: 'about.html', developer: 'Rakitha'};
 
 navLinks = [index, tpack, quiz, gallery, about];
 
@@ -72,6 +74,102 @@ function displayMenu() {
         menu.style.display = "block";
     }
 }
+
+// ----------- footer ------------
+var footer = document.getElementById('footer');
+
+var hr = document.createElement('hr');
+footer.appendChild(hr);
+
+// ------ make data list ----------
+var dl = document.createElement('dl');
+dl.setAttribute('class', 'footer-data');
+
+
+var dt = document.createElement('dt');
+dt.innerHTML = 'Contact';
+dl.appendChild(dt);
+
+var dd = document.createElement('dt');
+dd.innerHTML = '+xx-xxx xxx xxxx';
+dl.appendChild(dd);
+
+var dt = document.createElement('dt');
+dt.innerHTML = 'Address';
+dl.appendChild(dt);
+
+var dd = document.createElement('dt');
+dd.setAttribute('class', 'address');
+// ----- address --------
+
+var p = document.createElement('p');
+p.innerHTML = 'Tour Lanka';
+dd.appendChild(p);
+
+var p = document.createElement('p');
+p.innerHTML = 'IIT';
+dd.appendChild(p);
+
+var p = document.createElement('p');
+p.innerHTML = 'No. 57';
+dd.appendChild(p);
+
+var p = document.createElement('p');
+p.innerHTML = 'Ramakrishna Road';
+dd.appendChild(p);
+
+var p = document.createElement('p');
+p.innerHTML = 'Colombo 06';
+dd.appendChild(p);
+
+var p = document.createElement('p');
+p.innerHTML = 'Sri Lanka';
+p.setAttribute('id', 'address-locality');
+dd.appendChild(p);
+
+dl.appendChild(dd);
+// ----- end address ------
+
+var dt = document.createElement('dt');
+dt.innerHTML = 'Email';
+dl.appendChild(dt);
+
+var dd = document.createElement('dt');
+var a = document.createElement('a');
+a.setAttribute('href', 'mailto:inquiries@tourlanka.com');
+a.innerHTML = 'inquiries@tourlanka.com';
+dd.appendChild(a);
+dl.appendChild(dd);
+
+footer.appendChild(dl);
+
+// ------ credits --------
+
+var creditsDiv = document.createElement('div');
+creditsDiv.setAttribute('class', 'credits');
+
+var p = document.createElement('p');
+p.innerHTML = 'Copyright © 2019 Tour Lanka';
+creditsDiv.appendChild(p);
+
+var p = document.createElement('p');
+p.innerHTML = 'Website designed and developed by<br />SARK Web Devepolers';
+creditsDiv.appendChild(p);
+
+var p = document.createElement('p');
+p.innerHTML = 'Student: ';
+
+var a = document.createElement('a');
+a.setAttribute('href', '#');
+a.setAttribute('id', 'dev');
+a.innerHTML = "";
+
+p.appendChild(a);
+creditsDiv.appendChild(p);
+
+footer.appendChild(creditsDiv);
+
+
 
 
 /*
