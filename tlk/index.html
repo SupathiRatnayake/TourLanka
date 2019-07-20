@@ -6,6 +6,9 @@
         <title>Tour Lanka</title>
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
+        <style media="screen">
+
+        </style>
     </head>
     <body>
         <div class="top">
@@ -17,10 +20,7 @@
         </div>
         <div class="container">
             <!-- no breadcrums on home page -->
-            <div class="page-title">
-                <h2>Spend Your Holiday In Sri Lanka!</h2>
-                <h3><a href="#">Book Now</a> </h3>
-            </div>
+
             <!-- left column -->
             <aside class="left">
                 <!-- font-size-control inclueds font size increasing and decreasing buttons -->
@@ -35,9 +35,37 @@
             </aside>
             <!-- middle column contains main content -->
             <main>
+                <div id="banner">
+                    <h2>Spend Your Holiday In Sri Lanka!</h2>
+                    <h3><a href="#">Book Now</a> </h3>
+                </div>
+                <div class="video">
+
+                </div>
                 <div id="dev-group">
                     <h3>Coursework Group</h3>
-                    Adeesha code here
+                    <div class="row">
+                    	<div class="column">
+                    		<img src="images/Supathi.jpg" alt="Supathi Rathnayake - Student 01" onclick="myFunction(this);" width="140px">
+                    	</div>
+                    	<div class="column">
+                    		<img src="images/Rakitha.jpg" alt="Rakitha Nonis - Student 02" onclick="myFunction(this);" width="140px">
+                    	</div>
+                    	<div class="column">
+                    		<img src="images/Adeesha.jpg" alt="Adeesha Perera - Student 03" onclick="myFunction(this);" width="140px">
+                    	</div>
+                    	<div class="column">
+                    		<img src="images/Kaushika.jpg" alt="Kawshika Nawanjana - Student 04" onclick="myFunction(this);" width="140px">
+                    	</div>
+                    </div>
+
+                    <div id="container1">
+                        <figure class="wrapper">
+                            <img id="expandedImg" />
+                            <figcaption id="imgtext"></figcaption>
+                        </figure>
+                        <br/>
+                    </div>
                 </div>
             </main>
             <!-- right column -->
@@ -50,6 +78,27 @@
 
     <script src="main.js"></script>
     <script type="text/javascript">
+        var imgIsDisplaying = false;
+        var imgDiv = document.getElementById('container1');
+        var previousImg;
+        function myFunction(imgs) {
+            if (imgIsDisplaying && previousImg == imgs.alt) {
+                imgDiv.style.display = 'none';
+                imgIsDisplaying = false;
+            }else {
+                previousImg = imgs.alt;
+                imgDiv.style.display = 'block';
+                var expandImg = document.getElementById("expandedImg");
+                expandImg.setAttribute('src', imgs.src);
+                expandImg.setAttribute('alt', imgs.alt);
+                var imgText = document.getElementById("imgtext");
+                imgText.innerHTML = imgs.alt;
+                imgIsDisplaying = true;
+            }
+
+        }
+
+
         var dev = document.getElementById('dev');
         dev.setAttribute('href', 'rakitha.html');
         dev.innerHTML = 'Rakitha';
