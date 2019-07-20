@@ -7,7 +7,49 @@
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
         <style media="screen">
+            .group
+            {
+                background-image: url("images/LightGrey.jpg");
+                text-align: center;
+            }
+            .group h3
+            {
+                color: #fff;
+                padding: 5%;
+                background-color: #234;
+                margin-bottom: 10%;
+            }
+            .member-box
+            {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 300px;
+                margin: auto;
+            }
 
+            #container1
+            {
+                display: none;
+                margin: auto;
+                width: 300px;
+            }
+
+            #container1 .wrapper img
+            {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+
+            #container1 .wrapper figcaption
+            {
+                color: #fff;
+                font-size: 5vw;
+                padding: 5%;
+                background-color: #234;
+            }
         </style>
     </head>
     <body>
@@ -42,20 +84,20 @@
                 <div class="video">
 
                 </div>
-                <div id="dev-group">
+                <div class="group">
                     <h3>Coursework Group</h3>
-                    <div class="row">
-                    	<div class="column">
+                    <div class="member-box">
+                    	<div class="member">
                     		<img src="images/Supathi.jpg" alt="Supathi Rathnayake - Student 01" onclick="myFunction(this);" width="140px">
                     	</div>
-                    	<div class="column">
+                    	<div class="member">
                     		<img src="images/Rakitha.jpg" alt="Rakitha Nonis - Student 02" onclick="myFunction(this);" width="140px">
                     	</div>
-                    	<div class="column">
+                    	<div class="member">
                     		<img src="images/Adeesha.jpg" alt="Adeesha Perera - Student 03" onclick="myFunction(this);" width="140px">
                     	</div>
-                    	<div class="column">
-                    		<img src="images/Kaushika.jpg" alt="Kawshika Nawanjana - Student 04" onclick="myFunction(this);" width="140px">
+                    	<div class="member">
+                    		<img src="images/Kawshika.jpg" alt="Kawshika Nawanjana - Student 04" onclick="myFunction(this);" width="140px">
                     	</div>
                     </div>
 
