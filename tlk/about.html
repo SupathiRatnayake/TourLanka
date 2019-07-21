@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tour Lanka</title>
+        <link rel="icon" href="images/favicon.ico" type="image/icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <style media="screen">
+            .group
+            {
+                background-image: url("images/LightGrey.jpg");
+                text-align: center;
+            }
+            .group h3
+            {
+                color: #fff;
+                padding: 5%;
+                background-color: #234;
+                margin-bottom: 10%;
+            }
+            .member-box
+            {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 300px;
+                margin: auto;
+            }
+
+            #container1
+            {
+                display: none;
+                margin: auto;
+                width: 300px;
+            }
+
+            #container1 .wrapper img
+            {
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+
+            #container1 .wrapper figcaption
+            {
+                color: #fff;
+                font-size: 5vw;
+                padding: 5%;
+                background-color: #234;
+            }
+        </style>
+        <script>
+            function word() {
+              var nameFilled = false;
+              if (document.forms["Feedback"]["name"].value == "") {
+                alert("You have to fill the name..!");
+                return nameFilled;
+                }else{
+                    nameFilled = true;
+
+                }
+                if (document.forms["Feedback"]["email"].value == "") {
+                alert("You have to fill the e mail address..!");
+                return false;
+                }
+
+                var radios = document.getElementsByName("rate");
+                var i = 0;
+                var formValid = false;
+                var rating;
+
+                while (!formValid && i < radios.length) {
+                    if (radios[i].checked)
+                        formValid = true;
+                        rating = radios[i].value;
+
+                    i++;
+                }
+                if(formValid == true && nameFilled == true){
+            		if(document.getElementById("comment").value == ""){
+            			alert("Dear sir/madam "+document.forms["Feedback"]["name"].value+" thank you for your feedback. You have rated  as "+rating);
+            			  }
+            		else{
+            			alert("Dear sir/madam "+document.forms["Feedback"]["name"].value+" thank you for your feedback. You have rated  as "+rating+
+                          ". you commented as  "+ document.getElementById("comment").value);
+            		}
+                }
+                if (!formValid) alert("You have to give the rating..! ");
+                    return formValid;
+             }
+            </script>
+    </head>
+    <body>
+        <div class="top">
+
+            <header id="header"></header>
+
+            <nav id="nav"></nav>
+
+        </div>
+        <div class="container">
+            <!-- no breadcrums on home page -->
+
+            <!-- left column -->
+            <aside class="left">
+                <!-- font-size-control inclueds font size increasing and decreasing buttons -->
+                <div class="font-size-control">
+                    <div id="increase">
+                        <button type="button" name="button">+</button>
+                    </div>
+                    <div id="decrease">
+                        <button type="button" name="button">-</button>
+                    </div>
+                </div>
+            </aside>
+            <!-- middle column contains main content -->
+            <main>
+                <div id="banner">
+                    <h2>Tour Lanka Inc.</h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                </div>
+
+                <div class="group">
+                    <h3>Rate Us!</h3>
+                    <div class="feedBack">
+                        <form name="Feedback" onsubmit="word()">
+                    		<label>Name:<br/>
+                    			<input type="text" id="name" name="fname">
+                    		</label>
+                    		<br/>
+                    		<br/>
+
+                    		<label> comment:<br/>
+                    			<input type="text" width="200px" height="200px" id="comment" name="comment">
+                            </label>
+                    		<br/>
+                    		<br/>
+                    		<label>E-mail address:<br/>
+                    			<input type="text" maxlength="20" name="email">
+                    		</label>
+                    		<br/>
+                    		<br/>
+                    		<label id="rate">Rating<br/>
+                    			<input type="radio" value="excellent"  name="rate" />Excellent
+                    			<input type="radio" value="good" name="rrate" />Good
+                    			<input type="radio" value="average" name="rate" />Average
+                    			<input type="radio" value="weak" name="rate" />Weak
+                    		</label>
+                    		<br/>
+                    		<br/>
+
+                           <div class="row">
+                    		  <input type="submit" name="submit" value="Submit">
+                    		  <input type="submit" name="reset" value="reset">
+                    		</div>
+
+
+                    	</form>
+                    </div>
+
+                    <div id="container1">
+                        <figure class="wrapper">
+                            <img id="expandedImg" />
+                            <figcaption id="imgtext"></figcaption>
+                        </figure>
+                        <br/>
+                    </div>
+                </div>
+            </main>
+            <!-- right column -->
+            <aside class="right">
+                <button type="button" name="button">go up</button>
+            </aside>
+        </div> <!--container-->
+        <footer id="footer"></footer>
+    </body>
+
+    <script src="main.js"></script>
+    <script type="text/javascript">
+
+        var dev = document.getElementById('dev');
+        dev.setAttribute('href', 'rakitha.html');
+        dev.innerHTML = 'Rakitha';
+    </script>
+</html>
