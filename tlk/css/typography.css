@@ -39,31 +39,38 @@ nav button
     font-size: 7vw;
 }
 
-a
+footer *
 {
-    text-decoration: none;
-    color: #a60;
+    font-size: 5vw;
+    font-family: sans-serif;
 }
 
 footer
 {
-    font-size: 5vw;
-    color: #444;
-    font-family: sans-serif;
+    color: #333;
 }
 
 footer dd
 {
     font-style: oblique;
     font-family: serif;
+    color: #444;
 }
 
-footer dd a
+a
 {
-    font-size: 6vw;
+    text-decoration: none;
+    color: #a60;
 }
 
-.credits p, a
-{
-    font-size: 5vw;
+@media only screen and (min-width:768px){
+    h1
+    {
+        font-size: 10vw;
+    }
+
+    .page-title h2, h3 a
+    {
+        font-size: 7vw;
+    }
 }
