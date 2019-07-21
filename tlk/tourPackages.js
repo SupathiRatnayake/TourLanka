@@ -35,9 +35,9 @@ package5.desc = `It is a long established fact that a reader will be distracted 
 package6.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
 
 packageList = [package1, package2, package3, package4, package5, package6, package7];
-function displayPackages(packList) {
-    for (var i = 0; i < packList.length; i++) {
-        var package = packList[i];
+function displayPackages() {
+    for (var i = 0; i < packageList.length; i++) {
+        var package = packageList[i];
         var item = document.createElement('div');
         item.setAttribute('class', 'item');
         var title = document.createElement('h4');
@@ -86,7 +86,7 @@ function displayPackages(packList) {
     }
 }
 
-window.addEventListener('load', displayPackages(packageList));
+window.addEventListener('load', displayPackages);
 
 var leisure = [];
 var honeymoon = [];
@@ -96,31 +96,21 @@ var safari = [package3, package5, package6];
 var pilgrimage = [];
 
 var categories = {
-    'all': packageList,
     'leisure': leisure,
     'honeymoon': honeymoon,
     'historical': historical,
-    'adventure': adventure,
-    'safari': safari,
+    'adventure': adventure, 'safari': safari,
     'pilgrimage': pilgrimage
 };
 
+catNames = Object.keys(categories);
+
 var select = document.getElementsByName("p_categories")[0];
 
-select.addEventListener('onchange', dispayCategory);
-
 function dispayCategory() {
-    var cat = select.value;
-    if (value == 'all') {
-        displayPackages();
-    }
-    else {
-        for (var i = 0; i < categories.length; i++) {
-            category = Object.keys(categories)[i];
-            if (cat == category) {
-                displayPackages(categories[category]);
-            }
-    }
-
+    for (var i = 0; i < catNames.length; i++) {
+        if (select.value == catNames[i]) {
+            document.getElementById('package-container').innerHTML = select.value;
+        }
     }
 }
