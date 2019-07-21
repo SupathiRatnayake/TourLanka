@@ -75,6 +75,7 @@ function displayPackages(pack) {
         more.innerHTML = 'Description';
 
         var p = document.createElement('p');
+        p.setAttribute('class', 'description');
         p.innerHTML = package.desc;
 
         item.appendChild(title);
