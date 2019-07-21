@@ -35,9 +35,9 @@ package5.desc = `It is a long established fact that a reader will be distracted 
 package6.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
 
 packageList = [package1, package2, package3, package4, package5, package6, package7];
-function displayPackages() {
-    for (var i = 0; i < packageList.length; i++) {
-        var package = packageList[i];
+function displayPackages(pack) {
+    for (var i = 0; i < pack.length; i++) {
+        var package = pack[i];
         var item = document.createElement('div');
         item.setAttribute('class', 'item');
         var title = document.createElement('h4');
@@ -86,7 +86,7 @@ function displayPackages() {
     }
 }
 
-window.addEventListener('load', displayPackages);
+window.addEventListener('load', displayPackages(packageList));
 
 var leisure = [];
 var honeymoon = [];
@@ -105,12 +105,16 @@ var categories = {
 
 catNames = Object.keys(categories);
 
-var select = document.getElementsByName("p_categories")[0];
+var select = document.getElementById("p_categories");
+select.addEventListener('change', dispayCategory);
+
+var pContainer = document.getElementById('package-container');
 
 function dispayCategory() {
+    pContainer.innerHTML = "";
     for (var i = 0; i < catNames.length; i++) {
         if (select.value == catNames[i]) {
-            document.getElementById('package-container').innerHTML = select.value;
+            displayPackages(categories[catNames[i]]);
         }
     }
-}
+};
