@@ -292,6 +292,11 @@
 
     <script src="main.js"></script>
     <script type="text/javascript">
+        var dev = document.getElementById('dev');
+        dev.setAttribute('href', 'adeesha.html');
+        dev.innerHTML = 'Adeesha';
+    </script>
+    <script type="text/javascript">
     function ValidateForm(){
         result = new Array();
         count = 0;
@@ -343,9 +348,10 @@
             for (var i=0; i<result.length; i++) {
                 vString += result[i] + "<br/>";
             }
-        document.write("<img src='LOGO3.png' id='logo' alt='logo' width='180px' height='180px'/><h2 style='color:blue; font-size:40px;'>"+"Results !</h2>"+"<br/><p style='font-size:26px;'>"
+        document.write("<img src='images/logo_banner.png' id='logo' alt='logo' /><h2 style='color:blue; font-size:40px;'>"+"Results !</h2>"+"<br/><p style='font-size:26px;'>"
             +result.length+" Incorrect answers:<br/><br/>" + vString +
-            "</p><br/><p style='font-weight:bold;font-size:25px;'>Your score is "+answerScore+"</p>");
+            "</p><br/><p style='font-weight:bold;font-size:25px;'>Your score is "+answerScore+"</p>"+
+            "</br><a href=\"index.html\">Back to Home page</a>");
         }
         else {
             document.write("<img src='LOGO3.png' id='logo' alt='logo' width='180px' height='180px'/><h2 style='color:blue; font-size:40px;'>"+"Results !</h2>"+"<br/><center><p style='font-size:30px;'>"+
@@ -362,7 +368,7 @@
             document.body.style.backgroundColor = "#BDB76B";
         }
     }
-    <!--Set timer-->
+    //Set timer
     var total_seconds = 60*5;
     var c_minutes = parseInt(total_seconds / 60);
     var c_seconds = parseInt(total_seconds%60);
@@ -370,19 +376,20 @@
 
     document.getElementById("quiz-timer").innerHTML='Time Left : ' + c_minutes + ' minutes ' + c_seconds + ' seconds';
 
-    if (total_seconds>0)
-        {
-        total_seconds=total_seconds-1;
-        c_minutes = parseInt(total_seconds / 60);
-        c_seconds = parseInt(total_seconds%60);
-        setTimeout("CheckTime()",1000);
+        if (total_seconds>0)
+            {
+            total_seconds=total_seconds-1;
+            c_minutes = parseInt(total_seconds / 60);
+            c_seconds = parseInt(total_seconds%60);
+            setTimeout("CheckTime()",1000);
 
-        }
-    else
-        {
-        ValidateForm();
-        }
+            }
+        else
+            {
+            ValidateForm();
+            }
     }
+
     setTimeout("CheckTime()",1000);
 
     </script>
