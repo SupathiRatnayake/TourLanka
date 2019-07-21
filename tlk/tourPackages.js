@@ -43,8 +43,36 @@ function displayPackages() {
         title.innerHTML = package.packName;
         var image = document.createElement('img');
         image.setAttribute('src', 'images/' + package.image);
+        var dl = document.createElement('dl');
+
+            var dt1 = document.createElement('dt');
+            dt1.innerHTML = 'cost: '
+            dl.appendChild(dt1);
+
+            var dd1 = document.createElement('dd');
+            dd1.innerHTML = package.bCost;
+            dl.appendChild(dd1);
+
+
+            var dt2 = document.createElement('dt');
+            dt2.innerHTML = 'Number of Days: '
+            dl.appendChild(dt2);
+
+            var dd2 = document.createElement('dd');
+            dd2.innerHTML = package.numOfDays;
+            dl.appendChild(dd2);
+
+            var dt3 = document.createElement('dt');
+            dt3.innerHTML = 'Category: '
+            dl.appendChild(dt3);
+
+            var dd3 = document.createElement('dd');
+            dd3.innerHTML = package.category;
+            dl.appendChild(dd3);
+
         item.appendChild(title);
         item.appendChild(image);
+        item.appendChild(dl);
         document.getElementById('package-container').appendChild(item);
     }
 }
