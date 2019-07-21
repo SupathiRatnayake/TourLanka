@@ -96,6 +96,7 @@ var safari = [package3, package5, package6];
 var pilgrimage = [];
 
 var categories = {
+    'all': packageList,
     'leisure': leisure,
     'honeymoon': honeymoon,
     'historical': historical,
