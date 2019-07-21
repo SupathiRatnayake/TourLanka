@@ -63,7 +63,13 @@ a
     color: #a60;
 }
 
-@media only screen and (min-width:768px){
+/* For Tablets */
+@media only screen and (min-width:768px)
+{
+    *
+    {
+        font-size: 5vw;
+    }
     h1
     {
         font-size: 10vw;
@@ -72,5 +78,75 @@ a
     .page-title h2, h3 a
     {
         font-size: 7vw;
+    }
+
+    nav ul li a
+    {
+        color: #fff;
+        font-size: 5vw;
+        font-family: sans-serif;
+
+    }
+
+    nav button
+    {
+        color: #fff;
+        font-size: 5vw;
+    }
+
+    #menu ul li
+    {
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    footer *
+    {
+        font-size: 3vw;
+        font-family: sans-serif;
+    }
+}
+
+/* For Laptops, Desktop Monitors */
+@media only screen and (min-width:1000px)
+{
+    *
+    {
+        font-size: 2vw;
+    }
+    h1
+    {
+        font-size: 5vw;
+    }
+
+    .page-title h2, h3 a
+    {
+        font-size: 5vw;
+    }
+
+    nav ul li a
+    {
+        color: #fff;
+        font-size: 3vw;
+        font-family: sans-serif;
+
+    }
+
+    nav button
+    {
+        color: #fff;
+        font-size: 3vw;
+    }
+
+    #menu ul li
+    {
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    footer *
+    {
+        font-size: 1.5vw;
+        font-family: sans-serif;
     }
 }

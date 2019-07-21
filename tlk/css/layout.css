@@ -99,3 +99,15 @@ h1
 .left, .right, .font-size-control{
     display: none;
 }
+
+/* For Tablets */
+@media only screen and (min-width:768px)
+{
+
+}
+
+/* For Laptops, Desktop Monitors */
+@media only screen and (min-width:1000px)
+{
+    
+}
