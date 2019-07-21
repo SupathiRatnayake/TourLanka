@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Presentation Page</title>
+        <link rel="icon" href="birb.ico" type="image/icon">
+        <style media="screen">
+            body{
+                margin: 0;
+                font-family: georgia;
+                background-image: radial-gradient(rgba(0, 51, 80, 1), rgba(0, 0, 0, 1));
+                color: #fff;
+            }
+            h1{
+                color: #fff;
+                font-size: 50px;
+                text-align: center;
+            }
+            section{
+                margin: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            section > div{
+                font-size: 25px;
+                line-height: 20px;
+                padding: 50px;
+                padding-bottom: 20px;
+                text-align: center;
+                /*width: 20%;*/
+                margin: auto;
+            }
+            .profile{
+                display: none;
+                width: 35%;
+                margin: auto;
+                margin-bottom: 2%;
+                border-radius: 50%;
+
+            }
+
+            @media only screen and (min-width: 1000px) {
+                section{
+                    margin: 50px 150px 20px 150px;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                section>div{
+                    width: 30%;
+                }
+
+                .profile{
+                    display: block;
+                }
+
+            }
+            #countdown{
+                margin: auto;
+                text-align: center;
+                font-size: 50px;
+                width: 55px;
+                height: 55px;
+                font-family: sans-serif;
+                color: #000;
+                background-color: #aaa;
+                border-radius: 50%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>TITLE</h1>
+        <section>
+            <div>
+                <img class="profile" src="images/supathi.jpg" alt="Browser does't support image">
+                student1 name
+            </div>
+            <div>
+                <img class="profile" src="images/rakitha.jpg" alt="Browser does't support image">
+                student2 name
+            </div>
+            <div>
+                <img class="profile" src="images/adeesha.jpg" alt="Browser does't support image">
+                student3 name
+            </div>
+            <div>
+                <img class="profile" src="images/kawshika.jpg" alt="Browser does't support image">
+                student4 name
+            </div>
+        </section>
+        <div id="countdown">4</div>
+    </body>
+    <script type="text/javascript">
+        setInterval(timer, 1000);
+        var time = 3;
+        function timer(){
+            if (time > 0){
+                document.getElementById('countdown').innerHTML = time;
+                time--;
+            }
+            else {
+                document.getElementById('countdown').innerHTML = time;
+                window.location.href="index.html";
+            }
+        }
+    </script>
+</html>
