@@ -90,7 +90,7 @@ var dt = document.createElement('dt');
 dt.innerHTML = 'Contact';
 dl.appendChild(dt);
 
-var dd = document.createElement('dt');
+var dd = document.createElement('dd');
 dd.innerHTML = '+xx-xxx xxx xxxx';
 dl.appendChild(dd);
 
@@ -98,7 +98,7 @@ var dt = document.createElement('dt');
 dt.innerHTML = 'Address';
 dl.appendChild(dt);
 
-var dd = document.createElement('dt');
+var dd = document.createElement('dd');
 dd.setAttribute('class', 'address');
 // ----- address --------
 
@@ -134,7 +134,7 @@ var dt = document.createElement('dt');
 dt.innerHTML = 'Email';
 dl.appendChild(dt);
 
-var dd = document.createElement('dt');
+var dd = document.createElement('dd');
 var a = document.createElement('a');
 a.setAttribute('href', 'mailto:inquiries@tourlanka.com');
 a.innerHTML = 'inquiries@tourlanka.com';

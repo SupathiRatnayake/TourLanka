@@ -78,9 +78,22 @@ h1
     width: 90px;
 }
 
-.footer-data
+.footer-data, .credits
 {
-    width: 100%;
+    width: 90%;
+    padding: 5%;
+    background-color: #fff;
+}
+
+.footer-data dt
+{
+    padding-top: 5%;
+}
+
+.footer-data dd
+{
+    padding-bottom: 5%;
+    border-bottom: 2px solid #fc5;
 }
 
 .left, .right, .font-size-control{

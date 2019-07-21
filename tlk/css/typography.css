@@ -42,4 +42,28 @@ nav button
 a
 {
     text-decoration: none;
+    color: #a60;
+}
+
+footer
+{
+    font-size: 5vw;
+    color: #444;
+    font-family: sans-serif;
+}
+
+footer dd
+{
+    font-style: oblique;
+    font-family: serif;
+}
+
+footer dd a
+{
+    font-size: 6vw;
+}
+
+.credits p, a
+{
+    font-size: 5vw;
 }

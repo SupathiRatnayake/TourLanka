@@ -60,6 +60,7 @@
             {
                 background-color: #fff;
                 margin: 10px;
+                font-family: sans-serif;
             }
 
             input
@@ -81,7 +82,10 @@
 
         <div class="container">
             <div class="bread-crumbs">
-                Home ► Tour Packages
+                <a href="index.html">Home</a>
+                 ►
+                 <a href="#">Tour Packages</a>
+
             </div>
             <div class="page-title">
                 <h2>Tour Packages</h2>
@@ -151,5 +155,11 @@
     <script src="main.js"></script>
 
     <script src="tourPackages.js"></script>
+
+    <script type="text/javascript">
+        var dev = document.getElementById('dev');
+        dev.setAttribute('href', 'rakitha.html');
+        dev.innerHTML = 'Supathi';
+    </script>
 
 </html>
