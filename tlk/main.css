@@ -28,3 +28,23 @@ header .sitename
 {
     width: 80%;
 }
+
+@media only screen and(min-width:100px) {
+    .top
+    {
+        display: grid;
+        grid-template-areas: 'logo nav';
+    }
+
+    header
+    {
+        grid-area: 'logo';
+        width: 200px;
+    }
+
+    #nav
+    {
+        grid-area: 'nav';
+        width: 700px;
+    }
+}
