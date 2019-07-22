@@ -15,7 +15,7 @@ document.getElementById('header').appendChild(aTag);
 
 // ------------- Page data base -----------------
 var index = {name: 'Home', id:'index', file: 'index.html', developer: 'Rakitha'};
-var tpack = {name: 'Tour Packages', id:'tours', file: 'tourPackages.html', developer: 'Supathi'};
+var tpack = {name: 'Tours', id:'tours', file: 'tourPackages.html', developer: 'Supathi'};
 var quiz = {name: 'Quiz', id:'quiz', file: 'quiz.html', developer: 'Adeesha'};
 var gallery = {name: 'Gallery', id:'gal', file: 'gallery.html', developer: 'Kaushika'};
 var about = {name: 'About', id:'about', file: 'about.html', developer: 'Rakitha'};
@@ -171,23 +171,31 @@ footer.appendChild(creditsDiv);
 
 
 
-/*
-document.getElementById('incr').innerHTML ='<button type="button" id="inc" class="btn">+</button>';
-document.getElementById('decr').innerHTML ='<button type="button" id="dec" class="btn">-</button>';
+
+document.getElementById('plus').innerHTML ='<button type="button" id="inc" class="btn"><i class="fa fa-plus"></i></button>';
+document.getElementById('minus').innerHTML ='<button type="button" id="dec" class="btn"><i class="fa fa-minus"></i></button>';
 
 document.getElementById('inc').addEventListener("click", increase);
 document.getElementById('dec').addEventListener("click", decrease);
 
 var fsize = 18;  //default font size 18
 function increase(){
-    fsize++;
-    document.getElementById('bd').style.fontSize = fsize + "px";
-    return fsize;
+    if (fsize < 22) {
+        fsize++;
+        document.getElementsByTagName('body')[0].style.fontSize = fsize + "px";
+        return fsize;
+    }else {
+        alert('You cannot increase font size greater that 21!')
+    }
+
 }
 
 function decrease(){
-    fsize--;
-    document.getElementById('bd').style.fontSize = fsize + "px";
-    return fsize;
+    if (fsize > 14) {
+        fsize--;
+        document.getElementsByTagName('body')[0].style.fontSize = fsize + "px";
+        return fsize;
+    }else {
+        alert('You cannot decrease font size smaller that 14!')
+    }
 }
-*/

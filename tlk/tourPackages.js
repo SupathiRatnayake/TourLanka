@@ -71,18 +71,14 @@ function displayPackages(pack) {
             dd3.innerHTML = package.category;
             dl.appendChild(dd3);
 
-        var more = document.createElement('h6');
-        more.innerHTML = 'Description';
-
-        var p = document.createElement('p');
-        p.setAttribute('class', 'description');
-        p.innerHTML = package.desc;
+        var inq = document.createElement('a');
+        inq.setAttribute('href', 'inquiery.html');
+        inq.innerHTML = 'Inquier';
 
         item.appendChild(title);
         item.appendChild(image);
         item.appendChild(dl);
-        item.appendChild(more);
-        item.appendChild(p);
+        item.appendChild(inq);
         document.getElementById('package-container').appendChild(item);
     }
 }

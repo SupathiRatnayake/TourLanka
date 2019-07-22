@@ -19,7 +19,13 @@ a
 {
     text-decoration: none;
     text-decoration: none;
-    color: #e60;
+    color: #d30;
+}
+
+h1
+{
+    color: #f80;
+    text-shadow: 1px 2px 2px #000;
 }
 
 i

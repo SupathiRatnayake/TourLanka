@@ -4,16 +4,103 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <title>Gallery</title>
+        <link rel="stylesheet" href="main.css">
         <style media="screen">
-            .gallery img
-            {
-                width: 200px;
-            }
+        .img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 800px;
+            height: 500px;
+        }
 
-            #big-image
-            {
-                width: 800px;
-            }
+        img:hover {
+            box-shadow: 0 0 5px 5px rgba(0, 140, 186, 0.5);
+        }
+
+        /*        .images {}*/
+
+        body {
+            text-align: center;
+            background-color: #F7F9FB;
+            color: #8b0000;
+
+        }
+
+        .galImg {
+            padding-top: 10%;
+        }
+
+
+        form {
+            padding-top: 3%;
+            padding-bottom: 3%;
+            border: 5px groove #b3b3cc;
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+
+
+        .container {
+            position: relative;
+
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: zoom-in;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 50px 1px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        figcaption {
+            font-size: 25px;
+            width: 80%;
+            margin: auto;
+        }
+
         </style>
     </head>
     <body>
@@ -24,28 +111,201 @@
             <nav id="nav"></nav>
 
         </div>
-
         <div class="container">
+            <div class="page-heading">
+                <h1>Tour Packages</h1>
+            </div>
+            <div class="bread-crumbs">
+                <a href="index.html">Home</a>
+                <i class="fa fa-angle-double-right"></i>
+                <a href="gallery.html">Gallery</a>
+
+            </div>
+
+        <div>
+            <div id="fontSize">
+                <div id="plus"></div>
+                <div id="minus"></div>
+            </div>
+
             <main>
-                <div class="gallery">
-                    <img src="images/thumb1.jpg" alt="#" onclick="display('DSC02929.jpg')">
-                    <img src="images/thumb3.jpg" alt="#" onclick="display('package4.jpg')">
-                    <img src="images/thumb4.jpg" alt="#" onclick="display('package3.jpg')">
-                    <img src="images/thumb2.jpg" alt="#" onclick="display('package5.jpg')">
+                <div class="container">
 
-                </div>
-                <div>
-                    <img src="" alt="" id="big-image">
 
-                </div>
+        <!--        <form>-->
+        <div class="dropdown" style="float:left;">
+            <select name="text-color" id="text-color">
+                <option value="#F7F9FB">text earthy</option>
+                <option value="#0071BC">text darky</option>
+                <option value="#8b0000">text light</option>
+            </select>
+        </div>
+        <div class="dropdown" style="float:right;">
+            <select name="bg-color" id="bg-color">
+                <option value="#687864">Theme earthy</option>
+                <option value="#263238">Theme darky</option>
+                <option value="#ffffff">Theme light</option>
+            </select>
+        </div>
+        <!--        </form>-->
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="mySlides">
+
+        <img class="img" src="Image_container/Chimini_pool.JPG">
+        <form>
+            <figcaption> Chimney Poool is a pool which is located in Hortain Plains Sri Lanka. Chimney Pool has an elevation of 2112 meters and is west of Red Bridge and Black Bridge. This is an one of the breathtaking view of beautiful Hortain Plains.</figcaption>
+        </form>
+    </div>
+
+    <div class="mySlides">
+        <img class="img" src="Image_container/Kuttam_pokuna.jpg">
+        <form>
+            <figcaption>Kuttam pokuna or this twin pond is totally build with granite rock and is as large as a large tennis court. Historically it is said that the former kings who had been governing this country during the 26th and 17th centuries had built these two ponds which are located side by side, for the purpose of bathing mainly reserved for Buddhist monks as those kings had greatly respecting the Buddhist monks who were following the preachings of lord Buddha. The construction of this pond , with out the aid of modern technology or the modern machines is a great marvel of the ancient people who lived those days. Any one visiting Anuradhapura sacred city should not
+                miss to watch the twin ponds.</figcaption>
+        </form>
+    </div>
+
+    <div class="mySlides">
+        <img class="img" src="Image_container/Samadi_buddhastatue.jpg">
+        <form>
+            <figcaption>Samadhi Statue of Lord Buddha is worshiped by lots of local and international tourists since from the past. It is another destination that should be toured or visited in Sri lanka instead of relaxing your mind.Looming over the entire site of Mahamevnawa Park in Anuradhapura, Samadhi Statue is situated in the middle of the Park. This enviable statue possesses a deep meditation and the position of Lord Buddha at the first Enlightenment on his way to Nirvana. The statue can be easily found in the East from the Abhayagiri Dagoba, on the south west of the Sacred Jaya Sri Maha Bodhi and on the shore of Tissa Wewa. </figcaption>
+        </form>
+    </div>
+
+    <div class="mySlides">
+        <img class="img" src="Image_container/Worldsend.jpg">
+        <form>
+            <figcaption>The Horton Plains plateau comes to a sudden end at World’s End, a stunning escarpment that plunges 880m. The walk here is 4km, but the trail then loops back to Baker’s Falls (2km) and continues back to the entrance (another 3.5km). The 9.5km round trip takes a leisurely three hours. Unless you get there early, the view from World’s End is often obscured by mist, particularly during the rainy season from April to September. All you can expect to see from World’s End after around 9am is a swirling white wall. The early morning (between 6am and 10am) is the best time to visit, before the clouds roll in. That’s when you’ll spy toy-town, tea-plantation villages in the valley below, and an unencumbered view south towards the coast.</figcaption>
+        </form>
+    </div>
+
+    <div class="mySlides">
+
+        <img class="img" src="Image_container/DSC_2438.jpg" alt="">
+        <form>
+            <figcaption>Img1</figcaption>
+        </form>
+    </div>
+
+    <div class="mySlides">
+        <img class="img" src="Image_container/DSC_4142.jpg">
+        <form>
+            <figcaption>Img2</figcaption>
+        </form>
+    </div>
+
+
+
+    <!--    <div class="caption-container">-->
+    <p id="caption"></p>
+
+    <!--    </div>-->
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor " src="Image_container/Chimini_pool.JPG" style="width:100%" onclick="currentSlide(1)" alt="">
+        </div>
+        <div class="column">
+            <img class="demo cursor " src="Image_container/Kuttam_pokuna.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+        </div>
+        <div class="column">
+            <img class="demo cursor " src="Image_container/Samadi_buddhastatue.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+        </div>
+        <div class="column">
+            <img class="demo cursor " src="Image_container/Worldsend.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+        </div>
+        <div class="column">
+            <img class="demo cursor " src="Image_container/DSC_2438.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
+        </div>
+        <div class="column">
+            <img class="demo cursor " src="Image_container/DSC_4142.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
+        </div>
+    </div>
+    <!--    </div>-->
+
+    <div>
+        <hr>
+        <h1>Change aspects</h1>
+        <p>You can change Background Color from right dropdown menu and Text Color from left dropdown menu </p>
             </main>
         </div>
         <footer id="footer"></footer>
     </body>
+    <script src="main.js"></script>
+    <script type="text/javascript">
+    var dev = document.getElementById('dev');
+    dev.setAttribute('href', 'kawshika.html');
+    dev.innerHTML = 'Kawshika';
+    </script>
     <script type="text/javascript">
         function display(image) {
             var image = 'images/' + image;
             document.getElementById('big-image').setAttribute('src', image);
         }
+    </script>
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+
+        var colorMatch = {
+            '#F7F9FB': '#687864',
+            '#263238': '#0071BC',
+            '#8b0000': '#ffffff',
+
+            '#687864': '#F7F9FB',
+            '#0071BC': '#263238',
+            '#ffffff': '#8b0000'
+        }
+
+        var text = document.getElementById('text-color');
+        var bg = document.getElementById('bg-color');
+
+        text.onchange = function() {
+            document.getElementsByTagName('body')[0].style.color = text.value;
+            bg.value = colorMatch[text.value];
+            document.getElementsByTagName('body')[0].style.backgroundColor = colorMatch[text.value];
+        }
+
+        bg.onchange = function() {
+            document.getElementsByTagName('body')[0].style.backgroundColor = bg.value;
+            text.value = colorMatch[bg.value];
+            document.getElementsByTagName('body')[0].style.color = colorMatch[bg.value];
+        }
+
     </script>
 </html>
