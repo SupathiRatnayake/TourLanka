@@ -2,25 +2,11 @@
 var aTag = document.createElement('a');
 aTag.setAttribute('href', 'index.html');
 
-var logo = document.createElement('div');
-logo.setAttribute('id', 'logo');
-
 var img = document.createElement('img');
-img.setAttribute('src', 'images/logo_banner.png');
+img.setAttribute('src', 'images/banner.png');
 img.setAttribute('alt', 'Tour Lanka Logo');
 
-logo.appendChild(img);
-
-aTag.appendChild(logo);
-
-var websiteName = document.createElement('div');
-websiteName.setAttribute('id', 'site-name');
-var h1 = document.createElement('h1');
-h1.innerHTML = "Tour Lanka";
-
-websiteName.appendChild(h1);
-
-aTag.appendChild(websiteName);
+aTag.appendChild(img);
 
 document.getElementById('header').appendChild(aTag);
 // --------- Header Complete -----------

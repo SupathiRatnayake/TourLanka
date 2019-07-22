@@ -8,6 +8,15 @@
     font-size: 6vw;
 }
 
+h1
+{
+    font-size: 12vw;
+}
+
+h2
+{
+    font-size: 8vw;
+}
 
 /*----------------------------------FOR Tablets------------------------------*/
 
@@ -17,6 +26,18 @@
     {
         font-size: 4vw;
     }
+
+    h1
+    {
+        /* no changes*/
+    }
+
+    h2
+    {
+        font-size: 5vw;
+    }
+
+
 }
 
 
@@ -28,4 +49,15 @@
     {
         font-size: 1.5vw;
     }
+
+    h1
+    {
+        font-size: 4vw;
+    }
+
+    h2
+    {
+        font-size: 3vw;
+    }
+
 }
