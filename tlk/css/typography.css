@@ -27,6 +27,15 @@ form label, input
     font-size: 5vw;
 }
 
+footer
+{
+    text-align: center;
+}
+footer .footer-data
+{
+    width: 100%;
+}
+
 /*----------------------------------FOR Tablets------------------------------*/
 
 @media only screen and (min-width: 768px)
@@ -84,6 +93,11 @@ form label, input
     form label, input
     {
         font-size: 2vw;
+    }
+
+    footer
+    {
+        text-align: left;
     }
 
 

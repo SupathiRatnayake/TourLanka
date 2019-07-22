@@ -34,6 +34,25 @@ form
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+.footer-data, .credits
+{
+    width: 90%;
+    padding: 5%;
+    background-color: #fff;
+}
+
+.footer-data dt
+{
+    padding-top: 5%;
+}
+
+.footer-data dd
+{
+    padding-bottom: 5%;
+    border-bottom: 2px solid #fc5;
+}
+
+
 /*----------------------------------FOR Tablets------------------------------*/
 
 @media only screen and (min-width: 768px)
@@ -99,6 +118,36 @@ form
     {
         transition:0.6s ease;
         background-color: #eee;
+    }
+
+    .group
+    {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer-data, .credits
+    {
+        width: 20%;
+        padding: 2%;
+        background-color: #fff;
+    }
+
+    .footer-data dt
+    {
+        padding-top: 5%;
+    }
+
+    .footer-data dd
+    {
+        padding-top: 5%;
+        border-bottom: 0;
+    }
+
+    .footer-data
+    {
+        border-right: 2px solid #fc5;
+        margin-top: 5%;
     }
 
 

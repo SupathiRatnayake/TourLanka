@@ -80,6 +80,12 @@ var dd = document.createElement('dd');
 dd.innerHTML = '+xx-xxx xxx xxxx';
 dl.appendChild(dd);
 
+footer.appendChild(dl);
+
+//--------- New data list For Address-----------
+var dl = document.createElement('dl');
+dl.setAttribute('class', 'footer-data');
+
 var dt = document.createElement('dt');
 dt.innerHTML = 'Address';
 dl.appendChild(dt);
@@ -114,7 +120,13 @@ p.setAttribute('id', 'address-locality');
 dd.appendChild(p);
 
 dl.appendChild(dd);
+
+footer.appendChild(dl);
 // ----- end address ------
+
+//--------- New data list For Email-----------
+var dl = document.createElement('dl');
+dl.setAttribute('class', 'footer-data');
 
 var dt = document.createElement('dt');
 dt.innerHTML = 'Email';
@@ -132,7 +144,8 @@ footer.appendChild(dl);
 // ------ credits --------
 
 var creditsDiv = document.createElement('div');
-creditsDiv.setAttribute('class', 'credits');
+creditsDiv.setAttribute('id', 'credits');
+creditsDiv.setAttribute('class', 'footer-data');
 
 var p = document.createElement('p');
 p.innerHTML = 'Copyright © 2019 Tour Lanka';
