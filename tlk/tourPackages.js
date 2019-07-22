@@ -44,6 +44,7 @@ function displayPackages(pack) {
         title.innerHTML = package.packName;
         var image = document.createElement('img');
         image.setAttribute('src', 'images/' + package.image);
+        image.setAttribute('alt', package.name);
         var dl = document.createElement('dl');
 
             var dt1 = document.createElement('dt');

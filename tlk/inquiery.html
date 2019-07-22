@@ -38,9 +38,16 @@
                     margin: auto;
                 }
 
-                #price-display
+                .display-price
                 {
-                    font-size: 5vw;
+                    padding: 20px;
+                    margin: 20px;
+                    background-color: #eee;
+                }
+
+                .display-price p, #total
+                {
+                    font-size: 3vw;
                 }
 
             }
@@ -151,7 +158,7 @@
                         <label for="agree">I agree the <a href="#">Terms & Conditions</a> </label>
                         <input type="checkbox" id="terms" name="terms" tabindex="12">
 
-                        <input type="submit" id="submit" value="Inquir" tabindex="13" onclick="Submission()">
+                        <input type="submit" id="submit" value="Inquire" tabindex="13" onclick="Submission()">
                         <input type="reset" id="reset" tabindex="14" value="reset">
                     </fieldset>
 
@@ -173,6 +180,10 @@
                 menu.style.display = "block";
             }
         }
+
+        var dev = document.getElementById('dev');
+        dev.setAttribute('href', 'supathi.html');
+        dev.innerHTML = 'Supathi';
     </script>
     <script src="form.js"></script>
 
