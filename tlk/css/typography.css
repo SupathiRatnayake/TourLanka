@@ -2,3 +2,30 @@
 {
     text-decoration: none;
 }
+
+*
+{
+    font-size: 6vw;
+}
+
+
+/*----------------------------------FOR Tablets------------------------------*/
+
+@media only screen and (min-width: 768px)
+{
+    *
+    {
+        font-size: 4vw;
+    }
+}
+
+
+/*----------------------------------FOR Desktop------------------------------*/
+
+@media only screen and (min-width: 1000px)
+{
+    *
+    {
+        font-size: 1.5vw;
+    }
+}
