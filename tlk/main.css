@@ -1,3 +1,15 @@
 /* importing layout & typograhy */
 @import url('css/layout.css');
 @import url('css/typography.css');
+
+body
+{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.top header
+{
+    display: flex;
+    flex-direction: column;
+}
