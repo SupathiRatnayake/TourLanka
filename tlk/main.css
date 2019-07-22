@@ -13,3 +13,34 @@ body
     display: flex;
     flex-direction: column;
 }
+
+/*----------------------------------FOR Desktop------------------------------*/
+
+@media only screen and (min-width: 1000px)
+{
+    .top
+    {
+        display: grid;
+        grid-template-columns: 8fr 6fr;
+    }
+
+
+    nav button
+    {
+        display: none;
+    }
+
+    #menu
+    {
+        display: block;
+    }
+
+    #menu ul
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+}

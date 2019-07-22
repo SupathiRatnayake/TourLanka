@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+
 #logo
 {
     width: 100%;
@@ -18,9 +19,19 @@ nav button, #menu
     width: inherit;
 }
 
+#menu
+{
+    display: none;
+}
+
 #menu ul
 {
     list-style-type: none;
+}
+
+form
+{
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 /*----------------------------------FOR Tablets------------------------------*/
@@ -42,6 +53,8 @@ nav button, #menu
     #menu ul
     {
         list-style-type: none;
+        display: flex;
+        flex-direction: column;
     }
 
 
@@ -52,14 +65,10 @@ nav button, #menu
 
 @media only screen and (min-width: 1000px)
 {
-    #logo
-    {
-        width: 100px;
-    }
-
-    nav
+    .top
     {
         width: 100%;
+        background-color: #fff;
     }
 
     nav button
@@ -67,23 +76,30 @@ nav button, #menu
         display: none;
     }
 
+    #menu
+    {
+        display: block;
+    }
+
     #menu ul
     {
-        list-style-type: none;
-        float:right;
+        padding-top: 35px;
     }
-
-    #menu ul li
-    {
-        display:inline-block;
-    }
-
 
     #menu ul li a
     {
-    	padding:10px 22px;
-    	background-color: #aaa;
-    	transition:0.6s ease;
+        padding: 10px;
+        width: 100px;
+        background-color: #fff;
+        border-style: solid;
+        border-width: 0 0 0 1px;
     }
+
+    #menu ul li a:hover
+    {
+        transition:0.6s ease;
+        background-color: #eee;
+    }
+
 
 }
