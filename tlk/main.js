@@ -25,7 +25,7 @@ navLinks = [index, tpack, quiz, gallery, about];
 var btnMenu = document.createElement('button');
 btnMenu.setAttribute('type', 'button');
 btnMenu.setAttribute('onclick', 'displayMenu()');
-btnMenu.innerHTML = 'menu';
+btnMenu.innerHTML = 'menu <i class="fa fa-angle-down"></i>';
 
 document.getElementById('nav').appendChild(btnMenu);
 
