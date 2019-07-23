@@ -107,6 +107,11 @@ footer .footer-data
         font-size: 3vw;
     }
 
+    #menu ul
+    {
+        text-align: center;
+    }
+
     #menu ul li a
     {
         font-size: 2vw;
@@ -121,6 +126,11 @@ footer .footer-data
     footer
     {
         text-align: left;
+    }
+
+    #databox *
+    {
+        font-size: 1.25vw;
     }
 
 

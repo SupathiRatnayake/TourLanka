@@ -80,6 +80,14 @@ var dd = document.createElement('dd');
 dd.innerHTML = '+xx-xxx xxx xxxx';
 dl.appendChild(dd);
 
+var dd = document.createElement('dd');
+dd.innerHTML = '+xx-xxx xxx xxxx';
+dl.appendChild(dd);
+
+var dd = document.createElement('dd');
+dd.innerHTML = '+xx-xxx xxx xxxx';
+dl.appendChild(dd);
+
 footer.appendChild(dl);
 
 //--------- New data list For Address-----------
@@ -139,38 +147,75 @@ a.innerHTML = 'inquiries@tourlanka.com';
 dd.appendChild(a);
 dl.appendChild(dd);
 
+var dt = document.createElement('dt');
+dt.innerHTML = 'Fax';
+dl.appendChild(dt);
+
+var dd = document.createElement('dd');
+dd.innerHTML = 'xx-xxx xxx xxxx';
+dl.appendChild(dd);
+
 footer.appendChild(dl);
 
-// ------ credits --------
+//--------- Additional Data ----------
+var dataBox = document.createElement('div');
+dataBox.setAttribute('id', 'databox');
+dataBox.setAttribute('class', 'footer-data');
 
-var creditsDiv = document.createElement('div');
-creditsDiv.setAttribute('id', 'credits');
-creditsDiv.setAttribute('class', 'footer-data');
+    // ------ credits --------
 
-var p = document.createElement('p');
-p.innerHTML = 'Copyright © 2019 Tour Lanka';
-creditsDiv.appendChild(p);
+    var creditsDiv = document.createElement('div');
+    creditsDiv.setAttribute('id', 'credits');
 
-var p = document.createElement('p');
-p.innerHTML = 'Website designed and developed by<br />SARK Web Devepolers';
-creditsDiv.appendChild(p);
+    var p = document.createElement('p');
+    p.innerHTML = 'Copyright © 2019 Tour Lanka';
+    creditsDiv.appendChild(p);
 
-var p = document.createElement('p');
-p.innerHTML = 'Student: ';
+    var p = document.createElement('p');
+    p.innerHTML = 'Website designed and developed by<br />SARK Web Devepolers';
+    creditsDiv.appendChild(p);
 
-var a = document.createElement('a');
-a.setAttribute('href', '#');
-a.setAttribute('id', 'dev');
-a.innerHTML = "";
+    var p = document.createElement('p');
+    p.innerHTML = 'Student: ';
 
-p.appendChild(a);
-creditsDiv.appendChild(p);
+    var a = document.createElement('a');
+    a.setAttribute('href', '#');
+    a.setAttribute('id', 'dev');
+    a.innerHTML = "";
 
-footer.appendChild(creditsDiv);
+    p.appendChild(a);
+    creditsDiv.appendChild(p);
+
+    var p = document.createElement('p');
+    p.innerHTML = 'Website designed and developed by<br />SARK Web Devepolers';
+    creditsDiv.appendChild(p);
+
+    dataBox.appendChild(creditsDiv);
+
+    // -------- More Data ----------------
+
+    var a = document.createElement('a');
+    a.setAttribute('href', 'sitemap.html');
+    a.setAttribute('id', 'sitemap');
+    a.innerHTML = "Sitemap";
+
+    dataBox.appendChild(a);
+
+    // line break
+    var br = document.createElement('br');
+    br.innerHTML = "Terms & Conditions";
+
+    dataBox.appendChild(br);
+
+    var a = document.createElement('a');
+    a.setAttribute('href', 'terms.html');
+    a.setAttribute('id', 'terms');
+    a.innerHTML = "Terms & Conditions";
+
+    dataBox.appendChild(a);
 
 
-
-
+footer.appendChild(dataBox);
 
 document.getElementById('plus').innerHTML ='<button type="button" id="inc" class="btn"><i class="fa fa-plus"></i></button>';
 document.getElementById('minus').innerHTML ='<button type="button" id="dec" class="btn"><i class="fa fa-minus"></i></button>';
