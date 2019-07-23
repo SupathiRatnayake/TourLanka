@@ -3,31 +3,36 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Tour Lanka</title>
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
         <style media="screen">
-            .group
+            #feedback
             {
                 background-image: url("images/LightGrey.jpg");
                 text-align: center;
             }
-            .group h3
+            #feedback h3
             {
                 color: #fff;
-                padding: 5%;
                 background-color: #234;
-                margin-bottom: 10%;
             }
-            .member-box
+
+            #feedback form, h3
             {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                justify-content: space-around;
-                width: 300px;
+                width: 60%;
                 margin: auto;
+                padding: 2% 0 2% 0;
             }
+
+            #feedback form label
+            {
+                font-size: 2vw;
+                padding: 1%;
+                margin: 1%;
+            }
+
 
             #container1
             {
@@ -118,9 +123,8 @@
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                 </div>
 
-                <div class="group">
-                    <h3>Rate Us!</h3>
-                    <div class="feedBack">
+                <div id="feedback">
+                        <h3>Rate Us!</h3>
                         <form name="Feedback" onsubmit="word()">
                     		<label>Name:<br/>
                     			<input type="text" id="name" name="fname">

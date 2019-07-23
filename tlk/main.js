@@ -15,7 +15,7 @@ document.getElementById('header').appendChild(aTag);
 
 // ------------- Page data base -----------------
 var index = {name: 'Home', id:'index', file: 'index.html', developer: 'Rakitha'};
-var tpack = {name: 'Tour Packages', id:'tours', file: 'tourPackages.html', developer: 'Supathi'};
+var tpack = {name: 'Tours', id:'tours', file: 'tourPackages.html', developer: 'Supathi'};
 var quiz = {name: 'Quiz', id:'quiz', file: 'quiz.html', developer: 'Adeesha'};
 var gallery = {name: 'Gallery', id:'gal', file: 'gallery.html', developer: 'Kaushika'};
 var about = {name: 'About', id:'about', file: 'about.html', developer: 'Rakitha'};
@@ -25,7 +25,7 @@ navLinks = [index, tpack, quiz, gallery, about];
 var btnMenu = document.createElement('button');
 btnMenu.setAttribute('type', 'button');
 btnMenu.setAttribute('onclick', 'displayMenu()');
-btnMenu.innerHTML = 'menu';
+btnMenu.innerHTML = 'menu <i class="fa fa-angle-down"></i>';
 
 document.getElementById('nav').appendChild(btnMenu);
 
@@ -75,6 +75,14 @@ dl.setAttribute('class', 'footer-data');
 var dt = document.createElement('dt');
 dt.innerHTML = 'Contact';
 dl.appendChild(dt);
+
+var dd = document.createElement('dd');
+dd.innerHTML = '+xx-xxx xxx xxxx';
+dl.appendChild(dd);
+
+var dd = document.createElement('dd');
+dd.innerHTML = '+xx-xxx xxx xxxx';
+dl.appendChild(dd);
 
 var dd = document.createElement('dd');
 dd.innerHTML = '+xx-xxx xxx xxxx';
@@ -139,55 +147,100 @@ a.innerHTML = 'inquiries@tourlanka.com';
 dd.appendChild(a);
 dl.appendChild(dd);
 
+var dt = document.createElement('dt');
+dt.innerHTML = 'Fax';
+dl.appendChild(dt);
+
+var dd = document.createElement('dd');
+dd.innerHTML = 'xx-xxx xxx xxxx';
+dl.appendChild(dd);
+
 footer.appendChild(dl);
 
-// ------ credits --------
+//--------- Additional Data ----------
+var dataBox = document.createElement('div');
+dataBox.setAttribute('id', 'databox');
+dataBox.setAttribute('class', 'footer-data');
 
-var creditsDiv = document.createElement('div');
-creditsDiv.setAttribute('id', 'credits');
-creditsDiv.setAttribute('class', 'footer-data');
+    // ------ credits --------
 
-var p = document.createElement('p');
-p.innerHTML = 'Copyright © 2019 Tour Lanka';
-creditsDiv.appendChild(p);
+    var creditsDiv = document.createElement('div');
+    creditsDiv.setAttribute('id', 'credits');
 
-var p = document.createElement('p');
-p.innerHTML = 'Website designed and developed by<br />SARK Web Devepolers';
-creditsDiv.appendChild(p);
+    var p = document.createElement('p');
+    p.innerHTML = 'Copyright © 2019 Tour Lanka';
+    creditsDiv.appendChild(p);
 
-var p = document.createElement('p');
-p.innerHTML = 'Student: ';
+    var p = document.createElement('p');
+    p.innerHTML = 'Website designed and developed by<br />SARK Web Devepolers';
+    creditsDiv.appendChild(p);
 
-var a = document.createElement('a');
-a.setAttribute('href', '#');
-a.setAttribute('id', 'dev');
-a.innerHTML = "";
+    var p = document.createElement('p');
+    p.innerHTML = 'Student: ';
 
-p.appendChild(a);
-creditsDiv.appendChild(p);
+    var a = document.createElement('a');
+    a.setAttribute('href', '#');
+    a.setAttribute('id', 'dev');
+    a.innerHTML = "";
 
-footer.appendChild(creditsDiv);
+    p.appendChild(a);
+    creditsDiv.appendChild(p);
+
+    var p = document.createElement('p');
+    p.innerHTML = 'Website designed and developed by<br />SARK Web Devepolers';
+    creditsDiv.appendChild(p);
+
+    dataBox.appendChild(creditsDiv);
+
+    // -------- More Data ----------------
+
+    var a = document.createElement('a');
+    a.setAttribute('href', 'sitemap.html');
+    a.setAttribute('id', 'sitemap');
+    a.innerHTML = "Sitemap";
+
+    dataBox.appendChild(a);
+
+    // line break
+    var br = document.createElement('br');
+    br.innerHTML = "Terms & Conditions";
+
+    dataBox.appendChild(br);
+
+    var a = document.createElement('a');
+    a.setAttribute('href', 'terms.html');
+    a.setAttribute('id', 'terms');
+    a.innerHTML = "Terms & Conditions";
+
+    dataBox.appendChild(a);
 
 
+footer.appendChild(dataBox);
 
-
-/*
-document.getElementById('incr').innerHTML ='<button type="button" id="inc" class="btn">+</button>';
-document.getElementById('decr').innerHTML ='<button type="button" id="dec" class="btn">-</button>';
+document.getElementById('plus').innerHTML ='<button type="button" id="inc" class="btn"><i class="fa fa-plus"></i></button>';
+document.getElementById('minus').innerHTML ='<button type="button" id="dec" class="btn"><i class="fa fa-minus"></i></button>';
 
 document.getElementById('inc').addEventListener("click", increase);
 document.getElementById('dec').addEventListener("click", decrease);
 
 var fsize = 18;  //default font size 18
 function increase(){
-    fsize++;
-    document.getElementById('bd').style.fontSize = fsize + "px";
-    return fsize;
+    if (fsize < 22) {
+        fsize++;
+        document.getElementsByTagName('body')[0].style.fontSize = fsize + "px";
+        return fsize;
+    }else {
+        alert('You cannot increase font size greater that 21!')
+    }
+
 }
 
 function decrease(){
-    fsize--;
-    document.getElementById('bd').style.fontSize = fsize + "px";
-    return fsize;
+    if (fsize > 14) {
+        fsize--;
+        document.getElementsByTagName('body')[0].style.fontSize = fsize + "px";
+        return fsize;
+    }else {
+        alert('You cannot decrease font size smaller that 14!')
+    }
 }
-*/

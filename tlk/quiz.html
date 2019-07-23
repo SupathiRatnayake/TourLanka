@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Tour Lanka</title>
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
@@ -23,6 +24,13 @@
             .choice{
                 padding: 10px;
             }
+
+            #quiz-timer
+            {
+                color: red;
+                font-size: 2.5vw;
+            }
+
             @media only screen and (min-width:768px)
             {
                 .question strong
@@ -33,9 +41,26 @@
 
             @media only screen and (min-width:1000px)
             {
-                .question strong, .choice
+                .question strong
                 {
-                    font-size: 3vw;
+                    font-size: 2vw;
+                }
+
+                .choice label
+                {
+                    font-size: 1.5vw;
+                }
+
+                form
+                {
+                    width: 80%;
+                    margin: auto;
+                }
+
+                .question
+                {
+                    width: 80%;
+                    margin: auto;
                 }
             }
 
@@ -58,11 +83,16 @@
             </div>
             <div class="bread-crumbs">
                 <a href="index.html">Home</a>
-                 ►
-                 <a href="quiz.html">Quiz</a>
+                <i class="fa fa-angle-double-right"></i>
+                <a href="quiz.html">Quiz</a>
             </div>
 
-            <!-- middle column contains main content -->
+            <div id="fontSize">
+                <div id="plus"></div>
+                <div id="minus"></div>
+            </div>
+
+            <!-- main content -->
             <main>
                 <div class="container">
                     <form>
@@ -75,8 +105,7 @@
                         <div class="container2">
 
                         	<div class="question">
-                            	<strong>Question 1: What is the largest rain forest in SriLanka? </strong><br/>
-                            	<br/>
+                            	<strong>Question 1: What is the largest rain forest in SriLanka? </strong>
 
                                 <div class="choice">
                             	       <input type="radio" name="one" value="Sinharaja" id="Sinharaja">
@@ -98,7 +127,7 @@
                             </div>
 
                         	<div class="question">
-                            	<br/><strong>Question 2: In which year the Ceylon Tourist Board was established?</strong><br/>
+                            	<strong>Question 2: In which year the Ceylon Tourist Board was established?</strong>
                                 <div class="choice">
                                 	<input type="radio" name="two" value="1964" id="1964">
                                 	<label for="1964">1964</label>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
@@ -119,8 +148,8 @@
                             </div>
 
                         	<div class="question">
-                            	<br/><strong>Question 3: At present which institute conducts hotels and guest houses?</strong><br/>
-                            	<br/>
+                            	<strong>Question 3: At present which institute conducts hotels and guest houses?</strong>
+
                             	<div class="choice">
                                     <input type="radio" name="three" value="Srilanka Tourism Development Authority" id="Srilanka Tourism Development Authority" >
                                 	<label for="Srilanka Tourism Development Authority">Srilanka Tourism Development Authority</label>&nbsp; &nbsp;
@@ -140,8 +169,8 @@
                             </div>
 
                         	<div class="question">
-                            	<br/><strong>Question 4: The name of the zoological garden which was opened recently in Srilanka?</strong><br/>
-                            	<br/>
+                            	<strong>Question 4: The name of the zoological garden which was opened recently in Srilanka?</strong>
+
                                 <div class="choice">
                                 	<input type="radio" name="four" value="Mirijjawila Wetzone Garden" id="Mirijjawila Wetzone Garden">
                                 	<label for="Mirijjawila Wetzone Garden">Mirijjawila Wetzone Garden</label>&nbsp; &nbsp;
@@ -161,8 +190,8 @@
                             </div>
 
                         	<div class="question">
-                            	<br/><strong>Question 5: What won't be considered as a sanctuary in SriLanka?</strong><br/>
-                            	<br/>
+                            	<strong>Question 5: What won't be considered as a sanctuary in SriLanka?</strong>
+
                                 <div class="choice">
                                     <input type="radio" name="five" value="Wilpaththu" id="Wilpaththu">
                                 	<label for="Wilpaththu">Wilpaththu</label>&nbsp; &nbsp;&nbsp; &nbsp;
@@ -183,8 +212,8 @@
                         	</div>
 
                         	<div class="question">
-                            	<br/><strong>Question 6: which bird is not an endemic bird of SriLanka?</strong><br/>
-                            	<br/>
+                            	<strong>Question 6: which bird is not an endemic bird of SriLanka?</strong>
+
                                 <div class="choice">
                                     <input type="radio" name="six" value="SriLanka Blue Magpie" id="SriLanka Blue Magpie">
                                 	<label for="SriLanka Blue Magpie">SriLanka Blue Magpie</label>&nbsp; &nbsp;&nbsp; &nbsp;
@@ -205,8 +234,8 @@
                         	</div>
 
                         	<div class="question">
-                            	<br/><strong>Question 7: Which is not a world heritage cite in Srilanka?</strong><br/>
-                            	<br/>
+                            	<strong>Question 7: Which is not a world heritage cite in Srilanka?</strong>
+
                                 <div class="choice">
                                     <input type="radio" name="seven" value="Nilaweli Beach" id="Nilaweli Beach">
                                 	<label for="Nilaweli Beach">Nilaweli Beach</label>&nbsp; &nbsp;&nbsp; &nbsp;
@@ -226,8 +255,8 @@
                         	</div>
 
                         	<div class="question">
-                            	<br/><strong>Question 8: Which tourist destination is situated in Sabaragamuwa Province?</strong><br/>
-                            	<br/>
+                            	<strong>Question 8: Which tourist destination is situated in Sabaragamuwa Province?</strong>
+
                                 <div class="choice">
                                     <input type="radio" name="eight" value="Wasgamuwa National Park" id="Wasgamuwa National Park">
                                 	<label for="Wasgamuwa National Park">Wasgamuwa National Park</label>&nbsp; &nbsp;&nbsp; &nbsp;
@@ -247,8 +276,8 @@
                         	</div>
 
                         	<div class="question">
-                            	<br/><strong>Question 9: What is the oldest National park in SriLanka?</strong><br/>
-                            	<br/>
+                            	<strong>Question 9: What is the oldest National park in SriLanka?</strong>
+
                                 <div class="choice">
                                     <input type="radio" name="nine" value="Yala National Park" id="Yala National Park">
                                 	<label for="Yala National Park">Yala National Park</label>&nbsp; &nbsp;
@@ -268,8 +297,8 @@
                         	</div>
 
                         	<div class="question">
-                            	<br/><strong>Question 10: Which place in Srilanka that was named as a best tourist destination by a famous news paper magazine?</strong><br/>
-                            	<br/>
+                            	<strong>Question 10: Which place in Srilanka that was named as a best tourist destination by a famous news paper magazine?</strong>
+
                                 <div class="choice">
                                     <input type="radio" name="ten" value="The Temple of the Tooth" id="The Temple of the Tooth">
                                 	<label for="The Temple of the Tooth">The Temple of the Tooth </label>&nbsp; &nbsp;&nbsp; &nbsp;
@@ -297,10 +326,7 @@
                     </form>
                 </div><!-- container-->
             </main>
-            <!-- right column -->
-            <aside class="right">
-                <button type="button" name="button">go up</button>
-            </aside>
+
         </div> <!--container-->
         <footer id="footer"></footer>
     </body>

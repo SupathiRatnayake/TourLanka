@@ -120,6 +120,19 @@ form
         background-color: #eee;
     }
 
+    #fontSize
+    {
+        position: absolute;
+        padding: 20px;
+    }
+
+    .bread-crumbs
+    {
+        padding: 20px;
+        margin: 10px 0 10px 0;
+        
+    }
+
     .group
     {
         width: 80%;
