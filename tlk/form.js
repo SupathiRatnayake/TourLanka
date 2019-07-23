@@ -320,7 +320,8 @@ function Submission() {
             +'\nYour return day is ' + retDate.value
             + '\nYou\'ve chosen ' + package.value
             + '\nYour accomodation will be ' + accomodation.value
-            + '\nBooking will be done for ' + adults.value + ' adults and ' + children.value + ' children.';
+            + '\nBooking will be done for ' + adults.value + ' adults and ' + children.value + ' children.'
+            + '\nTotal cost: ' + cost.bCost + cost.aCost + cost.chCost + cost.hotelCost;
             confirm(message);
         }
         else {

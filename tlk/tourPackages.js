@@ -44,7 +44,6 @@ function displayPackages(pack) {
         title.innerHTML = package.packName;
         var image = document.createElement('img');
         image.setAttribute('src', 'images/' + package.image);
-        image.setAttribute('alt', package.name);
         var dl = document.createElement('dl');
 
             var dt1 = document.createElement('dt');
@@ -72,14 +71,18 @@ function displayPackages(pack) {
             dd3.innerHTML = package.category;
             dl.appendChild(dd3);
 
-        var inq = document.createElement('a');
-        inq.setAttribute('href', 'inquiery.html');
-        inq.innerHTML = 'Inquier';
+        var more = document.createElement('h6');
+        more.innerHTML = 'Description';
+
+        var p = document.createElement('p');
+        p.setAttribute('class', 'description');
+        p.innerHTML = package.desc;
 
         item.appendChild(title);
         item.appendChild(image);
         item.appendChild(dl);
-        item.appendChild(inq);
+        item.appendChild(more);
+        item.appendChild(p);
         document.getElementById('package-container').appendChild(item);
     }
 }

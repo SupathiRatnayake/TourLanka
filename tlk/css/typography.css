@@ -19,30 +19,7 @@ a
 {
     text-decoration: none;
     text-decoration: none;
-    color: #d30;
-}
-
-h1
-{
-    color: #f80;
-    text-shadow: 1px 2px 2px #000;
-}
-
-i
-{
-    color: #f80;
-}
-
-nav button
-{
-    color: ##234;
-    font-size: 8vw;
-}
-
-#menu ul li
-{
-    text-align: center;
-    font-size: 7vw;
+    color: #e60;
 }
 
 form label, input
@@ -107,11 +84,6 @@ footer .footer-data
         font-size: 3vw;
     }
 
-    #menu ul
-    {
-        text-align: center;
-    }
-
     #menu ul li a
     {
         font-size: 2vw;
@@ -126,11 +98,6 @@ footer .footer-data
     footer
     {
         text-align: left;
-    }
-
-    #databox *
-    {
-        font-size: 1.25vw;
     }
 
 
