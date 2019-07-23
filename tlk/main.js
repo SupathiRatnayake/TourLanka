@@ -18,9 +18,10 @@ var index = {name: 'Home', id:'index', file: 'index.html', developer: 'Rakitha'}
 var tpack = {name: 'Tours', id:'tours', file: 'tourPackages.html', developer: 'Supathi'};
 var quiz = {name: 'Quiz', id:'quiz', file: 'quiz.html', developer: 'Adeesha'};
 var gallery = {name: 'Gallery', id:'gal', file: 'gallery.html', developer: 'Kaushika'};
+var blog = {name: 'Blog', id:'blog', file: 'blog.html', developer: 'Supathi'};
 var about = {name: 'About', id:'about', file: 'about.html', developer: 'Rakitha'};
 
-navLinks = [index, tpack, quiz, gallery, about];
+navLinks = [index, tpack, quiz, gallery, blog, about];
 
 var btnMenu = document.createElement('button');
 btnMenu.setAttribute('type', 'button');
@@ -225,10 +226,19 @@ document.getElementById('dec').addEventListener("click", decrease);
 
 var fsize = 18;  //default font size 18
 function increase(){
+
     if (fsize < 22) {
+
+        var elements = document.getElementsByTagName('*');
+
         fsize++;
-        document.getElementsByTagName('body')[0].style.fontSize = fsize + "px";
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.fontSize = fsize + "px";
+        }
+
         return fsize;
+
     }else {
         alert('You cannot increase font size greater that 21!')
     }
@@ -236,10 +246,19 @@ function increase(){
 }
 
 function decrease(){
+
     if (fsize > 14) {
+
+        var elements = document.getElementsByTagName('*');
+
         fsize--;
-        document.getElementsByTagName('body')[0].style.fontSize = fsize + "px";
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.fontSize = fsize + "px";
+        }
+
         return fsize;
+
     }else {
         alert('You cannot decrease font size smaller that 14!')
     }
