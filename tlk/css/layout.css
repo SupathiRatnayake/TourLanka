@@ -122,7 +122,6 @@ form
 
     #fontSize
     {
-        position: absolute;
         padding: 20px;
     }
 
@@ -130,7 +129,7 @@ form
     {
         padding: 20px;
         margin: 10px 0 10px 0;
-        
+
     }
 
     .group

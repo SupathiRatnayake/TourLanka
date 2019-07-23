@@ -99,6 +99,11 @@ footer .footer-data
         color: #e42;
     }
 
+    i
+    {
+        color: #f80;
+    }
+
     form label, input
     {
         font-size: 1.5vw;
