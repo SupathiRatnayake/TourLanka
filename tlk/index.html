@@ -8,11 +8,35 @@
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
         <style media="screen">
+            #banner
+            {
+                width: 100%;
+                height: 600px;
+                background-image: url("images/DSC_3598.jpg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 20px;
+            }
+
+            #banner .text
+            {
+                color: #eee;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding-left: 30px;
+            }
+
+            #banner .text h3 a
+            {
+                font-size: 6vw;
+            }
+
             .group
             {
                 background-image: url("images/LightGrey.jpg");
                 text-align: center;
             }
+
             .group h2
             {
                 color: #fff;
@@ -59,6 +83,8 @@
                 {
                     width: 80%;
                     margin: auto;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
                 }
 
                 .group h2
@@ -112,11 +138,10 @@
             <!-- main content -->
             <main>
                 <div id="banner">
-                    <h2>Spend Your Holiday In Sri Lanka!</h2>
-                    <h3><a href="tourPackages.html">Book Now</a> </h3>
-                </div>
-                <div class="video">
-
+                    <div class="text">
+                        <h2>Spend Your Holiday In Sri Lanka!</h2>
+                        <h3><a href="tourPackages.html">Book Now</a> </h3>
+                    </div>
                 </div>
                 <div class="group">
                     <h2>Coursework Group</h2>
@@ -144,10 +169,6 @@
                     </div>
                 </div>
             </main>
-            <!-- right column -->
-            <aside class="right">
-                <button type="button" name="button">go up</button>
-            </aside>
         </div> <!--container-->
         <footer id="footer"></footer>
     </body>
