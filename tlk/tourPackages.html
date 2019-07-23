@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Tour Packages</title>
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
@@ -18,16 +17,17 @@
             {
                 padding: 5px;
                 margin: 5px;
-                background-color: #eee;
             }
 
-            .package-input h4
+            .package-input h4, input, label
             {
-                font-size: 3vw;
-                font-family: sans-serif;
-                color: #333;
+                font-size: 8vw;
             }
 
+            .package-input select
+            {
+                font-size: 20px;
+            }
 
             .item img
             {
@@ -74,33 +74,6 @@
                 display: none;
             }
 
-            @media only screen and (min-width: 1000px) {
-                #package-container
-                {
-                    width: 80%;
-                    margin: auto;
-                    padding: 2%;
-                }
-
-                .item
-                {
-                    width: 80%;
-                    margin: auto;
-                    margin-bottom: 5%;
-                    padding: 5%;
-                }
-
-
-                .item h4
-                {
-                    color: #d92;
-                    font-size: 3vw;
-                    font-family: sans-serif;
-                    margin: auto;
-                }
-
-            }
-
         </style>
     </head>
     <body>
@@ -118,24 +91,18 @@
             </div>
             <div class="bread-crumbs">
                 <a href="index.html">Home</a>
-                <i class="fa fa-angle-double-right"></i>
-                <a href="tourPackages.html">Tour Packages</a>
+                 ►
+                 <a href="#">Tour Packages</a>
 
-            </div>
-
-            <div id="fontSize">
-                <div id="plus"></div>
-                <div id="minus"></div>
             </div>
 
             <main>
-                <!-- form to choose package category -->
                 <div class="package-form">
                     <form id="packages">
 
                         <div class="package-input">
 
-                            <label for="p_categories"><h4>Package Category</h4></label>
+                            <h4>Package Category</h4>
 
                             <select class="" id="p_categories">
                                 <option value="all">All</option>
@@ -149,12 +116,29 @@
 
                         </div>
 
+                        <div class="package-input">
+
+                        <label for="min">Minimum Price</label>
+                        <input type="text" name="" placeholder="Minimum price">
+
+                        </div>
+
+                        <div class="package-input">
+
+                        <label for="max">Minimum Price</label>
+                        <input type="text" name="" placeholder="Maximum price">
+
+                        </div>
+
+
                     </form>
+                    <h4><a href="inquiery.html">Inquiries</a></h4>
                 </div>
 
                 <div id="package-container"></div>
-
+                <h4><a href="inquiery.html">Inquiries</a></h4>
             </main>
+
 
         </div>
         <footer id="footer"></footer>
@@ -166,7 +150,7 @@
 
     <script type="text/javascript">
         var dev = document.getElementById('dev');
-        dev.setAttribute('href', 'supathi.html');
+        dev.setAttribute('href', 'rakitha.html');
         dev.innerHTML = 'Supathi';
     </script>
 

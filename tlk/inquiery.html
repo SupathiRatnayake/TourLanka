@@ -3,12 +3,34 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Tour Lanka</title>
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
         <style media="screen">
+            form
+            {
+                display: block;
+                font-size: 5vw;
+            }
 
+            fieldset
+            {
+                display: flex;
+                flex-direction: column;
+            }
+
+            legend, label
+            {
+                margin-top: 10px;
+                padding: 10px;
+            }
+
+            input
+            {
+                font-size: 5vw;
+                padding: 5px;
+                margin: 5px;
+            }
 
             #price-display
             {
@@ -21,35 +43,6 @@
             #total::after
             {
                 content: '$'
-            }
-
-            @media only screen and (min-width: 1000px){
-
-                .inquiry
-                {
-                    width: 80%;
-                    margin: auto;
-                    background-image: url("images/LightGrey.jpg");
-                }
-
-                fieldset
-                {
-                    width: 40%;
-                    margin: auto;
-                }
-
-                .display-price
-                {
-                    padding: 20px;
-                    margin: 20px;
-                    background-color: #eee;
-                }
-
-                .display-price p, #total
-                {
-                    font-size: 3vw;
-                }
-
             }
 
 
@@ -74,17 +67,14 @@
             <div class="bread-crumbs">
                 <div class="bread-crumbs">
                     <a href="index.html">Home</a>
-                    <i class="fa fa-angle-double-right"></i>
-                    <a href="tourPackages.html">Tour Packages</a>
-                    <i class="fa fa-angle-double-right"></i>
-                    <a href="inquiry.html">Inquiery</a>
+                     ►
+                     <a href="tourPackages.html">Tour Packages</a>
+                     ►
+                     <a href="inquiry.html">Inquiery</a>
                 </div>
             </div>
-            <div id="fontSize">
-                <div id="plus"></div>
-                <div id="minus"></div>
-            </div>
-            <!-- main content - Inquiry form -->
+
+            <!-- middle column contains main content - Inquiry form -->
             <main>
 
                 <div class="display-price">
@@ -154,18 +144,22 @@
                         <input type="text" class="guests" id="children" name="children" tabindex="11" placeholder="Children(under 12 yrs)">
 
                     </fieldset>
-                    <fieldset class="submission">
+                    <div class="">
                         <label for="agree">I agree the <a href="#">Terms & Conditions</a> </label>
                         <input type="checkbox" id="terms" name="terms" tabindex="12">
+                    </div>
 
-                        <input type="submit" id="submit" value="Inquire" tabindex="13" onclick="Submission()">
-                        <input type="reset" id="reset" tabindex="14" value="reset">
-                    </fieldset>
+                    <input type="submit" id="submit" value="Inquir" tabindex="13" onclick="Submission()">
+
+                    <input type="reset" id="reset" tabindex="14" value="reset">
 
                 </form>
 
             </main>
-
+            <!-- right column -->
+            <aside class="right">
+                <button type="button" name="button">go up</button>
+            </aside>
         </div>
         <footer id="footer"></footer>
     </body>
@@ -180,10 +174,6 @@
                 menu.style.display = "block";
             }
         }
-
-        var dev = document.getElementById('dev');
-        dev.setAttribute('href', 'supathi.html');
-        dev.innerHTML = 'Supathi';
     </script>
     <script src="form.js"></script>
 
