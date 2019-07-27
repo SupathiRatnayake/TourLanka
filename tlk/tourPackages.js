@@ -12,13 +12,19 @@ function tourObj(packName,  bCost, numOfDays, category, image) {
 
 // Package objects
 
-var package1 = new tourObj('Glorious Mountains', 500, 5, 'Adventure', 'package1.jpg');
+var package1 = new tourObj('Glorious Mountains', 500, 4, 'Adventure', 'package1.jpg');
 var package2 = new tourObj('Heritage in Polonnaruwa', 800, 5, 'historical', 'package2.jpg');
-var package3 = new tourObj('Elephant watching in Yala', 800, 5, 'safari', 'package3.jpg');
-var package4 = new tourObj('Pilgrimage to Anuradhapura', 500, 5, 'pilgrimage', 'package4.jpg');
+var package3 = new tourObj('Elephant watching in Yala', 800, 3, 'safari', 'package3.jpg');
+var package4 = new tourObj('Pilgrimage to Anuradhapura', 500, 6, 'pilgrimage', 'package4.jpg');
 var package5 = new tourObj('Bird Watching', 800, 5, 'safari', 'package5.jpg');
-var package6 = new tourObj('Elephant watching in Udawalawe', 800, 5, 'safari', 'package6.jpg');
-var package7 = new tourObj('Trip to Galle Fort', 800, 5, 'historical', 'package7.jpg');
+var package6 = new tourObj('Elephant watching in Udawalawe', 800, 3, 'safari', 'package6.jpg');
+var package7 = new tourObj('Trip to Galle Fort', 100, 1, 'historical', 'package7.jpg');
+var package8 = new tourObj('Surfung in Arugambay', 500, 5, 'Adventure', 'package8.jpg');
+var package9 = new tourObj('Waterfall Tour', 500, 7, 'Adventure', 'package9.jpg');
+var package10 = new tourObj('Water Sports', 500, 4, 'Adventure', 'package10.jpg');
+var package11 = new tourObj('Romantic Ocean', 500, 7, 'Honey Moon', 'package11.jpg');
+var package12 = new tourObj('Honey Moon by the beach', 500, 7, 'Honey Moon', 'package12.jpg');
+var package13 = new tourObj('Honey moon in Numwara Eliya', 500, 7, 'Honey Moon', 'package13.jpg');
 
 // Add a description to each package
 
@@ -34,7 +40,11 @@ package5.desc = `It is a long established fact that a reader will be distracted 
 
 package6.desc = `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`;
 
-packageList = [package1, package2, package3, package4, package5, package6, package7];
+packageList = [
+    package1, package2, package3, package4, package5,
+     package6, package7, package8, package9, package10,
+     package11, package12, package13
+ ];
 function displayPackages(pack) {
     for (var i = 0; i < pack.length; i++) {
         var package = pack[i];
@@ -44,6 +54,7 @@ function displayPackages(pack) {
         title.innerHTML = package.packName;
         var image = document.createElement('img');
         image.setAttribute('src', 'images/' + package.image);
+        image.setAttribute('alt', package.name);
         var dl = document.createElement('dl');
 
             var dt1 = document.createElement('dt');
@@ -71,34 +82,28 @@ function displayPackages(pack) {
             dd3.innerHTML = package.category;
             dl.appendChild(dd3);
 
-        var more = document.createElement('h6');
-        more.innerHTML = 'Description';
-
-        var p = document.createElement('p');
-        p.setAttribute('class', 'description');
-        p.innerHTML = package.desc;
+        var inq = document.createElement('a');
+        inq.setAttribute('href', 'inquiery.html');
+        inq.innerHTML = 'Inquier';
 
         item.appendChild(title);
         item.appendChild(image);
         item.appendChild(dl);
-        item.appendChild(more);
-        item.appendChild(p);
+        item.appendChild(inq);
         document.getElementById('package-container').appendChild(item);
     }
 }
 
 window.addEventListener('load', displayPackages(packageList));
 
-var leisure = [];
-var honeymoon = [];
-var historical = [package2, package7];
-var adventure = [package1];
+var honeymoon = [package11, package12, package13];
+var historical = [package2, package4, package7];
+var adventure = [package1, package8, package9, package10];
 var safari = [package3, package5, package6];
-var pilgrimage = [];
+var pilgrimage = [package2, package4];
 
 var categories = {
     'all': packageList,
-    'leisure': leisure,
     'honeymoon': honeymoon,
     'historical': historical,
     'adventure': adventure, 'safari': safari,

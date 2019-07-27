@@ -8,39 +8,32 @@
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
         <style media="screen">
-
             .price::after
             {
                 content: "$";
             }
-
             .package-input
             {
                 padding: 5px;
                 margin: 5px;
                 background-color: #eee;
             }
-
             .package-input h4
             {
                 font-size: 3vw;
                 font-family: sans-serif;
                 color: #333;
             }
-
-
             .item img
             {
                 width: 96%;
                 height: auto;
                 margin: 2%;
             }
-
             .item dl, h6, p
             {
                 margin: 2%;
             }
-
             .item h4
             {
                 color: #d92;
@@ -48,32 +41,27 @@
                 font-family: sans-serif;
                 margin: auto;
             }
-
             #package-container
             {
                 display: flex;
                 flex-direction: column;
                 background-image: url('images/LightGrey.jpg');
             }
-
             .item
             {
                 background-color: #fff;
                 margin: 10px;
                 font-family: sans-serif;
             }
-
             input
             {
                 width: 95%;
                 margin: auto;
             }
-
             .description
             {
                 display: none;
             }
-
             @media only screen and (min-width: 1000px) {
                 #package-container
                 {
@@ -81,7 +69,6 @@
                     margin: auto;
                     padding: 2%;
                 }
-
                 .item
                 {
                     width: 80%;
@@ -89,8 +76,6 @@
                     margin-bottom: 5%;
                     padding: 5%;
                 }
-
-
                 .item h4
                 {
                     color: #d92;
@@ -98,9 +83,7 @@
                     font-family: sans-serif;
                     margin: auto;
                 }
-
             }
-
         </style>
     </head>
     <body>
@@ -123,17 +106,22 @@
 
             </div>
 
+            <div id="fontSize">
+                <div id="plus"></div>
+                <div id="minus"></div>
+            </div>
+
             <main>
+                <!-- form to choose package category -->
                 <div class="package-form">
                     <form id="packages">
 
                         <div class="package-input">
 
-                            <h4>Package Category</h4>
+                            <label for="p_categories"><h4>Package Category</h4></label>
 
                             <select class="" id="p_categories">
                                 <option value="all">All</option>
-                                <option value="leisure">Leisure Tours</option>
                                 <option value="honeymoon">Honeymoon Packages</option>
                                 <option value="adventure">Adventure Tours/ Trecks</option>
                                 <option value="historical">Historical Tours</option>
@@ -150,7 +138,6 @@
 
             </main>
 
-
         </div>
         <footer id="footer"></footer>
     </body>
@@ -161,7 +148,7 @@
 
     <script type="text/javascript">
         var dev = document.getElementById('dev');
-        dev.setAttribute('href', '../cv/supathi.html');
+        dev.setAttribute('href', 'supathi.html');
         dev.innerHTML = 'Supathi';
     </script>
 

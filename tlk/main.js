@@ -224,10 +224,10 @@ document.getElementById('minus').innerHTML ='<button type="button" id="dec" clas
 document.getElementById('inc').addEventListener("click", increase);
 document.getElementById('dec').addEventListener("click", decrease);
 
-var fsize = 18;  //default font size 18
+var fsize = 21;  //default font size 18
 function increase(){
 
-    if (fsize < 22) {
+    if (fsize < 28) {
 
         var elements = document.getElementsByTagName('*');
 
