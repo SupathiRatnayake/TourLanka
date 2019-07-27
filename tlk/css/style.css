@@ -1,0 +1,275 @@
+*{
+	padding:0;
+	margin:0;
+	font-family:Century Gothic;
+}
+.mario{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../1.jpg);;
+}
+
+.logo img{
+	
+	float:left;
+	width:120px;
+	height:auto;
+}
+.main{
+	max-width:1200px;
+	margin:auto;
+}
+	.title{
+	 position:absolute;
+	 top:50%;
+	 left:50%;
+	 transform:translate(-50%,-50%);
+ }
+ .title h2{
+	 color:#fff;
+	 font-size:820%;
+	 font-family:Adventure;
+ }
+.button{
+	position:absolute;
+	 top:70%;
+	 left:50%;
+	 transform:translate(-50%,-50%);
+}
+.btn{
+	border:1px solid #fff;
+	font-size:190%;
+	padding:10px 30px;
+	color:#fff;
+	text-decoration:none;
+	transition:0.6s ease;
+}
+.btn:hover{
+	background-color:#fff;
+	color:#000;
+}
+.offer{
+	text-align:center;
+	margin:20px 0 0 390px;
+	font-family:ActionIs;
+	font-size:480%;
+	color:#101C5C;
+	word-spacing:20px;
+	
+}
+
+header{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../8e.jpg);
+	height:100vh;
+	background-size:cover;
+	background-position:center;
+}
+ul{
+	float:right;
+	list-style-type:none;
+	
+}
+ul li{
+	display:inline-block;
+}
+ul button:hover{
+		display:block;
+}
+ul li a{
+	font-family:SimSun;
+	text-decoration:none;
+	font-size:190%;
+	color:#fff;
+	padding:10px 22px;
+	border:2px solid transparent;
+	transition:0.6s ease;
+}
+ul li a:hover {
+	background-color:#fff;
+	color:#000;
+}
+
+.dropbtn {
+	background-color:transparent;
+	padding:10px 22px;
+	font-family:SimSun;
+	font-size:190%;
+	color:#fff;
+	border:2px solid transparent;
+	transition:0.6s ease;
+}
+.dropbtn:hover{
+	background-color:#fff;
+	color:#000;
+}
+
+.dropdown {
+ border:2px solid transparent;
+  display: inline-block;
+  
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+	background-color:#fff;
+}
+.para {
+	height:400px;
+	padding:50px;
+	
+}
+.para h2{
+	margin:20px 20px;
+	font-family:SimSun;
+	font-size:390%;
+	color:#433939;
+	
+}
+.para p{
+	margin:10px 50px;
+	line-height:50px;
+	font-family:Adventure;
+	font-size:180%;
+	
+}
+#footer p {
+	color: #fff;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0 0 6px;
+}
+#featured {
+	background-image:url(../6e.jpg);
+	background-size:cover;
+	background-position:center;
+	height:2600px;
+	width: 1519px;
+	margin: 0px 0px;
+	
+}
+#featured li {
+	float: left;
+	width: 220px;
+	margin: 10px 390px;
+	text-align: center;
+	padding:50px 10px 0 400px;
+}
+#featured li h3 {
+	color: #07304d;
+	font-size: 27px;
+	margin: 18px 0 18px 65px;
+	font-family:SimSun;
+}
+#featured li h3 a {
+	color: #080808;
+	text-decoration: none;
+}
+#featured li h3 a:hover {
+	background-color:#fff;
+	color:CB7FDE;
+}
+#featured li p {
+	color: #07304d;
+	font-size: 24px;
+	text-align: center;
+	margin:0 0 0 45px;
+	
+}
+.last{
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../10.jpg);
+	height:325px;
+	margin:2600px 0 0 0;
+}
+#links {
+	float: left;
+	width: 460px;
+	margin: 0 10px;
+}
+#links > div {
+	float: left;
+	width: 230px;
+	color:#fff;
+	font-size:120%;
+	
+}
+#links ul {
+	list-style: none;
+	width: 178px;
+	margin: 10px 0;
+	padding: 20px;
+	
+}
+#links ul li {
+	margin: 10px 0;
+	padding: 3px 0;
+}
+
+#links ul li a {
+	font-size:490%;
+	color: #fff;
+	font-size: 20px;
+	line-height: 24px;
+	text-decoration: none;
+	text-align:center;
+}
+#links ul li a:hover{
+	background-color:#2D9EA4;
+	color:#000;
+}
+#footer .footnote {
+	float: right;
+	display: inline-block;
+	color: #fff;
+	width: 460px;
+	margin-right: 10px;
+}
+#links p{
+	color:#fff;
+}
+.more{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../5e.jpg);
+	height:100vh;
+	background-size:cover;
+	background-position:center;
+}
+.more h2{
+	font-size:490%;
+	font-family:Adventure;
+	color:#B9D41C;
+	margin:60px 80px;
+}
+.plearn{
+	font-family:SimSun;
+	font-size:180%;
+	color:#fff;
+	padding:30px;
+}
+.editor p{
+	margin:10px 0 0 0px;
+	text-align:center;
+	padding:20px;
+}
+.editor h3{
+	margin:130px 0 0 0px;
+	text-align:right;
+}
+
+
+
