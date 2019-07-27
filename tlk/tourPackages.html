@@ -7,7 +7,7 @@
         <title>Tour Packages</title>
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
-    <!--    <style media="screen">
+        <style media="screen">
 
             .price::after
             {
@@ -18,17 +18,16 @@
             {
                 padding: 5px;
                 margin: 5px;
+                background-color: #eee;
             }
 
-            .package-input h4, input, label
+            .package-input h4
             {
-                font-size: 8vw;
+                font-size: 3vw;
+                font-family: sans-serif;
+                color: #333;
             }
 
-            .package-input select
-            {
-                font-size: 20px;
-            }
 
             .item img
             {
@@ -75,7 +74,34 @@
                 display: none;
             }
 
-        </style> -->
+            @media only screen and (min-width: 1000px) {
+                #package-container
+                {
+                    width: 80%;
+                    margin: auto;
+                    padding: 2%;
+                }
+
+                .item
+                {
+                    width: 80%;
+                    margin: auto;
+                    margin-bottom: 5%;
+                    padding: 5%;
+                }
+
+
+                .item h4
+                {
+                    color: #d92;
+                    font-size: 3vw;
+                    font-family: sans-serif;
+                    margin: auto;
+                }
+
+            }
+
+        </style>
     </head>
     <body>
         <div class="top">
@@ -95,11 +121,6 @@
                 <i class="fa fa-angle-double-right"></i>
                 <a href="tourPackages.html">Tour Packages</a>
 
-            </div>
-
-            <div id="fontSize">
-                <div id="plus"></div>
-                <div id="minus"></div>
             </div>
 
             <main>
@@ -122,27 +143,11 @@
 
                         </div>
 
-                        <div class="package-input">
-
-                        <label for="min">Minimum Price</label>
-                        <input type="text" name="" placeholder="Minimum price">
-
-                        </div>
-
-                        <div class="package-input">
-
-                        <label for="max">Minimum Price</label>
-                        <input type="text" name="" placeholder="Maximum price">
-
-                        </div>
-
-
                     </form>
-                    <h4><a href="inquiery.html">Inquiries</a></h4>
                 </div>
 
                 <div id="package-container"></div>
-                <h4><a href="inquiery.html">Inquiries</a></h4>
+
             </main>
 
 
@@ -156,7 +161,7 @@
 
     <script type="text/javascript">
         var dev = document.getElementById('dev');
-        dev.setAttribute('href', 'rakitha.html');
+        dev.setAttribute('href', '../cv/supathi.html');
         dev.innerHTML = 'Supathi';
     </script>
 

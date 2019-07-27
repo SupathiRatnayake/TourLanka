@@ -7,31 +7,8 @@
         <title>Tour Lanka</title>
         <link rel="icon" href="images/favicon.ico" type="image/icon">
         <link rel="stylesheet" href="main.css" type="text/css">
-        <!--<style media="screen">
-           form
-            {
-                display: block;
-                font-size: 5vw;
-            }
+        <style media="screen">
 
-            fieldset
-            {
-                display: flex;
-                flex-direction: column;
-            }
-
-            legend, label
-            {
-                margin-top: 10px;
-                padding: 10px;
-            }
-
-            input
-            {
-                font-size: 5vw;
-                padding: 5px;
-                margin: 5px;
-            }
 
             #price-display
             {
@@ -46,8 +23,39 @@
                 content: '$'
             }
 
+            @media only screen and (min-width: 1000px){
 
-        </style>-->
+                .inquiry
+                {
+                    width: 80%;
+                    margin: auto;
+                    background-image: url("images/LightGrey.jpg");
+                }
+
+                fieldset
+                {
+                    width: 40%;
+                    margin: auto;
+					display: flex;
+					flex-direction: column;
+                }
+
+                .display-price
+                {
+                    padding: 20px;
+                    margin: 20px;
+                    background-color: #eee;
+                }
+
+                .display-price p, #total
+                {
+                    font-size: 3vw;
+                }
+
+            }
+
+
+        </style>
     </head>
     <body>
         <header>
@@ -78,8 +86,7 @@
                 <div id="plus"></div>
                 <div id="minus"></div>
             </div>
-
-            <!-- middle column contains main content - Inquiry form -->
+            <!-- main content - Inquiry form -->
             <main>
 
                 <div class="display-price">
@@ -149,22 +156,18 @@
                         <input type="text" class="guests" id="children" name="children" tabindex="11" placeholder="Children(under 12 yrs)">
 
                     </fieldset>
-                    <div class="">
+                    <fieldset class="submission">
                         <label for="agree">I agree the <a href="#">Terms & Conditions</a> </label>
                         <input type="checkbox" id="terms" name="terms" tabindex="12">
-                    </div>
 
-                    <input type="submit" id="submit" value="Inquir" tabindex="13" onclick="Submission()">
-
-                    <input type="reset" id="reset" tabindex="14" value="reset">
+                        <input type="submit" id="submit" value="Inquire" tabindex="13" onclick="Submission()">
+                        <input type="reset" id="reset" tabindex="14" value="reset">
+                    </fieldset>
 
                 </form>
 
             </main>
-            <!-- right column -->
-            <aside class="right">
-                <button type="button" name="button">go up</button>
-            </aside>
+
         </div>
         <footer id="footer"></footer>
     </body>
@@ -179,6 +182,10 @@
                 menu.style.display = "block";
             }
         }
+
+        var dev = document.getElementById('dev');
+        dev.setAttribute('href', '../cv/supathi.html');
+        dev.innerHTML = 'Supathi';
     </script>
     <script src="form.js"></script>
 
