@@ -84,7 +84,7 @@ function displayPackages(pack) {
 
         var inq = document.createElement('a');
         inq.setAttribute('href', 'inquiery.html');
-        inq.innerHTML = 'Inquier';
+        inq.innerHTML = 'Inquire';
 
         item.appendChild(title);
         item.appendChild(image);
